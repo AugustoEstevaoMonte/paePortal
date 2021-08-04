@@ -1,0 +1,380 @@
+/*
+Theme Name: PAe - CFM
+Theme URI: https://portal.cfm.org.br/
+Author: Augusto
+Author URI: https://portal.cfm.org.br/
+Description: Tema criado para o Processo Administrativo Eletrônico PAE.
+Version: 1.0
+*/
+
+
+
+
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap");
+.bg_green {
+  background-color: #00815A;
+}
+
+.menu {
+  background-color: #006144;
+}
+
+.menu-lista li {
+  padding: 0 39px;
+}
+
+.menu-lista li a {
+  color: white !important;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.colW {
+  background-color: red;
+}
+
+@media (max-width: 992px) {
+  .menu-lista li {
+    padding: 10px 0px 10px 0px;
+  }
+  .menu-lista li a {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1385px) {
+  .menu-lista li {
+    padding: 0 5px;
+  }
+}
+
+.setaCima {
+  background-image: url(img/seta.svg);
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 15px !important;
+}
+
+.setaCima:hover {
+  background-image: url(img/setaCima.svg);
+  background-position: center center  !important;
+  background-repeat: no-repeat !important;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 15px !important;
+}
+
+/*INICIO DA PARTE MODIFICADA DO WORDPRESS*/
+ul.list-unstyled li
+{
+ display: inline;
+ padding: 0 45px;
+}
+
+ul.list-unstyled li a
+{
+  display: inline-block;
+  text-decoration: none !important;
+  padding: 0.5rem 1rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+@media (max-width: 992px)
+{
+  ul.list-unstyled li
+  {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 15px;
+  }
+
+  ul.list-unstyled li a
+  {
+    text-decoration: none !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+
+}
+
+@media (min-width: 992px)
+{
+  ul.list-unstyled li a
+  {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+  }
+}
+/*FIM DA PARTE MODIFICADA DO WORDPRESS*/
+
+
+/*INICIO DO HERO BANNER DO CFM*/
+.hero_title {
+  color: white;
+  font-weight: 500;
+  font-size: 2.25em;
+}
+
+.title_margin {
+  padding-top: 156px;
+  padding-left: 95px;
+}
+
+.btn_saiba {
+  background: white;
+  color: #0D825F;
+  border-radius: 30px;
+  font-size: 18px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-left: 96px !important;
+  margin-top: 33px;
+}
+
+@media (max-width: 576px) {
+  .hero_title {
+    color: white;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
+  .title_margin {
+    padding-top: 160px;
+    padding-left: 50px;
+  }
+  .btn_saiba {
+    font-size: 16px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: 50px !important;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .img_section {
+    background: linear-gradient(97.51deg, rgba(0, 129, 90, 0.4) 0%, rgba(255, 255, 255, 0.2) 52.09%, rgba(55, 131, 193, 0.6) 100%), url(/img/hero-pae.png) center center/cover no-repeat;
+    height: 545px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .img_section {
+    background: linear-gradient(97.51deg, rgba(0, 129, 90, 0.4) 0%, rgba(255, 255, 255, 0.2) 52.09%, rgba(55, 131, 193, 0.6) 100%), url(img/hero-pae.png) center center/cover no-repeat;
+    height: 666px !important;
+  }
+}
+
+.img_section {
+  background: linear-gradient(97.51deg, rgba(0, 129, 90, 0.4) 0%, rgba(255, 255, 255, 0.2) 52.09%, rgba(55, 131, 193, 0.6) 100%), url(img/hero-pae.png) center center/cover no-repeat;
+  height: 492px;
+}
+
+/*FIM DO HERO BANNER DO CFM*/
+.box_acesso {
+  background-color: #0D825F;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 22px 0;
+}
+
+.box-maior {
+  padding: 22px 0;
+  display: inline-block;
+  background-color: #0D825F;
+  border-radius: 10px;
+}
+
+.colH {
+  background-color: yellow;
+}
+
+.icone_tit {
+  padding: 0 11px 0 0;
+}
+
+.titulo {
+  color: #006144;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.titulo_icon {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.acesso_rapido .ar_wrapper:nth-child(even) {
+  padding: 10px 10px 10px 5px;
+}
+
+.acesso_rapido .ar_wrapper:nth-child(odd) {
+  padding: 10px 0 10px 10px;
+}
+
+h2.titulo_icon a
+{
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/*INICIO DAS NOTICIAS*/
+.bg_white {
+  background-color: white;
+}
+
+.predio_metal {
+  background: linear-gradient(115.59deg, #1F1A18 0%, rgba(31, 26, 24, 0.8) 47.63%, rgba(31, 26, 24, 0) 100%, rgba(31, 26, 24, 0.7) 100%), url(img/predioMetal.png) center center/cover no-repeat;
+  height: 382px;
+}
+
+.text_not {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 240px;
+  padding-left: 20px;
+}
+
+.text_not a {
+  color: white;
+}
+
+.predio_car {
+  background: linear-gradient(115.59deg, #1F1A18 0%, rgba(31, 26, 24, 0.8) 47.63%, rgba(31, 26, 24, 0) 100%, rgba(31, 26, 24, 0.7) 100%), url(img/predioCaracol.png) center center/cover no-repeat;
+  height: 382px;
+}
+
+/*INICIO DAS NOTICIAS*/
+/*INICIO DOS COMUNICADOS*/
+.text_comunicados {
+  color: #0D825F;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text_comunicados:hover {
+  color: black !important;
+}
+
+@media (max-width: 576px) {
+  .text_not {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 240px;
+    padding-left: 5px;
+  }
+  .text_not a {
+    color: white;
+  }
+}
+
+/*INICIO DO PAE CFM EM NÚMEROS*/
+.text_aument {
+  font-size: 64px;
+  color: white;
+  line-height: 76px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text_lower {
+  font-size: 30px;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text_p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  margin-right: 50px !important;
+  margin-left: 50px !important;
+}
+
+.box_dados {
+  padding: 50px 0;
+  background: linear-gradient(138deg, #004F37 0.59%, #2B7B62 0.6%, #00815A 54.96%, #32A683 100%);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .text_aument {
+    font-size: 36px;
+  }
+  .text_lower {
+    font-size: 18px;
+  }
+}
+
+.shad_img {
+  -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+  background-color: none !important;
+}
+
+/*FIM DO PAE CFM EM NÚMEROS*/
+/*INICIO DA ESTILIZAÇÃO DOS MANUAIS DO CFM*/
+.text_manual_central {
+  font-weight: 500;
+  font-size: 20px;
+  color: #00815A;
+}
+
+.text_manual_central:hover {
+  color: black !important;
+}
+
+/*FIM DA ESTILIZAÇÃO DOS MANUAIS DO CFM*/
+/*INICIO DA ESTILIZAÇÃO DO FAQ*/
+.box_faq {
+  background: #00815A !important;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px !important;
+  padding: 8px 0;
+  color: white !important;
+}
+
+.text_faq {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.text_white {
+  color: white !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #00815A !important;
+}
+
+.accordion-button:focus {
+  border-color: white !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*FIM DA ESTILIZAÇÃO DO FAQ*/
+* {
+  font-family: 'Baloo 2', cursive;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #EAEEF0;
+}
+/*# sourceMappingURL=style.css.map */

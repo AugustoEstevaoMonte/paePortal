@@ -1,0 +1,79 @@
+.bg_green {
+  @include bac($green-medium);
+}
+
+.menu {
+  @include bac($green-dark);
+}
+
+.menu-lista {
+  li 
+  {
+    padding: 0 39px;
+    a 
+    {
+      color: white !important;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1em;
+    }
+  }
+}
+
+.colW {
+  @include bac(red);
+}
+
+@media (max-width: $lg) {
+  .menu-lista {
+    li {
+      padding: 10px 0px 10px 0px;
+      a 
+      {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1385px)  //Conserta um problema com o menu em que os tamanhos de 992px e 1200px o menu quebra o container
+{
+  .menu-lista {
+    li 
+    {
+      padding: 0 5px;
+    }
+  }
+}
+
+
+.setaCima
+{
+  background-image: url(/img/seta.svg);
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 15px !important;
+}
+
+.setaCima:hover
+{
+  background-image: url(/img/setaCima.svg);
+  background-position: center center  !important;
+  background-repeat: no-repeat !important;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 15px !important;
+}
+
+
+
+
+
+
+
+

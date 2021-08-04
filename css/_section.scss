@@ -1,0 +1,120 @@
+/*INICIO DO HERO BANNER DO CFM*/
+
+.hero_title
+{
+  color: white;
+  font-weight: 500;
+  font-size: 2.25em;
+}
+
+
+
+.title_margin
+{
+  padding-top: 156px;
+  padding-left: 95px;
+}
+
+.btn_saiba
+{
+  background: white;
+  color: $green-lightness;
+  border-radius: 30px;
+  font-size: 18px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-left: 96px !important;
+  margin-top: 33px;
+}
+
+@media(max-width: $sm)
+{
+  .hero_title
+  {
+    color: white;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
+  .title_margin
+  {
+    padding-top: 160px;
+    padding-left: 50px;
+  }
+  .btn_saiba
+  {
+    font-size: 16px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: 50px !important;
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1399px)
+{
+  .img_section {
+    background: linear-gradient(97.51deg, rgba(0, 129, 90, 0.4) 0%, rgba(255, 255, 255, 0.2) 52.09%, rgba(55, 131, 193, 0.6) 100%), url(/img/hero-pae.png) center center/cover no-repeat;
+    height: 545px !important;
+  }
+}
+
+@media screen and (min-width: $md) and (max-width: 991px)
+{
+  .img_section {
+    background: linear-gradient(97.51deg, rgba(0, 129, 90, 0.4) 0%, rgba(255, 255, 255, 0.2) 52.09%, rgba(55, 131, 193, 0.6) 100%), url(/img/hero-pae.png) center center/cover no-repeat;
+    height: 666px !important;
+  }
+}
+
+.img_section {
+  background: linear-gradient(97.51deg, rgba(0, 129, 90, 0.4) 0%, rgba(255, 255, 255, 0.2) 52.09%, rgba(55, 131, 193, 0.6) 100%), url(/img/hero-pae.png) center center/cover no-repeat;
+  height: 492px;
+}
+
+/*FIM DO HERO BANNER DO CFM*/
+
+.box_acesso {
+  background-color: $green-lightness;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 22px 0;
+}
+
+.box-maior {
+  padding: 22px 0;
+  display: inline-block;
+  background-color: $green-lightness;
+  border-radius: 10px;
+}
+
+.colH {
+  background-color: yellow;
+}
+
+.icone_tit {
+  padding: 0 11px 0 0;
+}
+
+.titulo {
+  color: $green-dark;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+
+.titulo_icon {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.acesso_rapido .ar_wrapper:nth-child(even) {
+  padding: 10px 10px 10px 5px;  // top, right, bottom, left.
+}
+
+.acesso_rapido .ar_wrapper:nth-child(odd) {
+  padding: 10px 0 10px 10px;
+}
+
+

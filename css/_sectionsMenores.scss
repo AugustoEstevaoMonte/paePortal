@@ -1,0 +1,113 @@
+/*INICIO DO PAE CFM EM NÚMEROS*/
+
+.text_aument
+{
+  font-size: 64px;
+  color: white;
+  line-height: 76px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.text_lower
+{
+  font-size: 30px;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text_p
+{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: white;
+  margin-right: 50px !important;
+  margin-left: 50px !important;
+}
+
+.box_dados
+{
+  padding: 50px 0;
+  background: linear-gradient(138deg, #004F37 0.59%, #2B7B62 0.6%, #00815A 54.96%, #32A683 100%);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px)
+{
+  .text_aument
+  {
+    font-size: 36px;
+  }
+  .text_lower
+  {
+    font-size: 18px;
+  }
+}
+
+.shad_img
+{
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+  background-color: none !important;
+}
+
+/*FIM DO PAE CFM EM NÚMEROS*/
+
+/*INICIO DA ESTILIZAÇÃO DOS MANUAIS DO CFM*/
+
+.text_manual_central
+{ 
+  font-weight: 500;
+  font-size: 20px;
+  color: $green-medium;
+  
+}
+.text_manual_central:hover
+{
+    color: black !important;
+}
+
+/*FIM DA ESTILIZAÇÃO DOS MANUAIS DO CFM*/
+
+/*INICIO DA ESTILIZAÇÃO DO FAQ*/
+
+.box_faq
+{
+  background: $green-medium !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px !important;
+  padding: 8px 0;
+  color: white !important;
+} 
+
+.text_faq
+{
+ color: white;
+ font-size: 18px;
+ font-weight: 500;
+ line-height: 28px;
+}
+
+.text_white
+{
+  color: white !important
+}
+
+.accordion-button:not(.collapsed)
+
+{
+  background: $green-medium !important;
+}
+
+.accordion-button:focus
+{
+  border-color: white !important;
+  box-shadow: none;
+}
+
+
+
+/*FIM DA ESTILIZAÇÃO DO FAQ*/
+

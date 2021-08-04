@@ -1,0 +1,32 @@
+//FONTE
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap');
+//FONTE
+
+//INICIO CORES
+$green-medium: #00815A;
+$green-dark: #006144;
+$green-light: #32A683;
+$green-lightness: #0D825F;
+$icon-acess: #424544;
+//INICIO CORES
+
+//BREAKPOINTS SCSS
+
+  $xs: 0;
+  $sm: 576px;
+  $md: 768px;
+  $lg: 992px;
+  $xl: 1200px;
+  $xxl: 1400px;
+
+
+//FIM DOS BREAKPOINTS SCSS
+
+//INICIO MIXINS
+
+@mixin bac($color)
+{
+  background-color: $color;
+}
+
+//FIM MIXINS

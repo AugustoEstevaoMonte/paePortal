@@ -1,0 +1,64 @@
+/*INICIO DAS NOTICIAS*/
+
+.bg_white
+{
+  @include bac(white);
+}
+
+
+
+
+@mixin textoNoticias($tam,$padt,$padl)
+{
+  font-size: $tam;
+  font-weight: bold;
+  padding-top: $padt;
+  padding-left: $padl;
+}
+
+.predio_metal
+{
+  background: linear-gradient(115.59deg, #1F1A18 0%, rgba(31, 26, 24, 0.8) 47.63%, rgba(31, 26, 24, 0) 100%, rgba(31, 26, 24, 0.7) 100%), url(/img/predioMetal.png) center center/cover no-repeat;
+  height: 382px;
+}
+
+.text_not
+{
+  @include textoNoticias(24px,240px,20px);
+  a
+  {
+    color: white;
+  }
+}
+
+.predio_car{
+  background:linear-gradient(115.59deg, #1F1A18 0%, rgba(31, 26, 24, 0.8) 47.63%, rgba(31, 26, 24, 0) 100%, rgba(31, 26, 24, 0.7) 100%),url(/img/predioCaracol.png) center center/cover no-repeat ;
+  height: 382px;
+}
+
+/*INICIO DAS NOTICIAS*/
+
+/*INICIO DOS COMUNICADOS*/
+.text_comunicados
+{
+  color: $green-lightness;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text_comunicados:hover
+{
+  color: black !important;
+}
+
+@media(max-width: $sm)
+{
+  .text_not
+  {
+    @include textoNoticias(18px,240px,5px);
+    a
+    {
+      color: white;
+    }
+  }
+}

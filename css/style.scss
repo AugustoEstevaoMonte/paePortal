@@ -14,3 +14,27 @@ body
 {
   background-color: #EAEEF0;
 }
+/*tetrtretretrtretretetertertterteretr*/
+.menu_principal
+{
+  li
+  {
+    .sub-menu
+    {
+          .menu-item
+          {
+              .sub-menu
+              {
+                background-color: red !important;
+                .menu-item
+                {
+                  display: block;
+                  text-align: right !important;
+                  min-width: 150px;
+                }
+              }
+          }
+    }
+  }
+}
+/*tetrtretretrtretretetertertterteretr*/

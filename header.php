@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PAe processo administrativo eletrônico - CFM conselho federal de medicina">
+  <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta name="author" content="CFM conselho federal de medicina">
   <meta name="copyright" content="CFM">
   <meta name="robots" content="index, follow">
@@ -49,6 +50,10 @@
       // <li class="nav-item">
       //<a class="nav-link" href="#">PAUTA DE JULGAMENTO<div class="setaCima"></div></span></a>
       //</li>
+
+
+
+      
       ?>
 
 

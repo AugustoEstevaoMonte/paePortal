@@ -4,6 +4,9 @@
 
 <?php get_header(); ?>
 
+
+
+
 <section class="mt-5">
     <div class="container">
       <div class="row">
@@ -109,7 +112,9 @@
       </div>
     </div>
   </section>
+  
     <!--INICIO DA PARTE DE NOTICIAS E COMUNICADOS DO CFM-->
+    
   <article class="bg_white mt-5">
           <div class="container">
                 <div class="row">
@@ -118,77 +123,114 @@
                             <h2 class="titulo pb-5 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_tit" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Notícias e Comunicados</h2>
                         </div>
 
-                      <!--INICIO DAS NOTICÍAS-->
-                        <div class="col-12 col-lg-6 pb-5">
-                                  <div class="predio_metal">
 
-                                        <div class="container">
 
-                                                <div class="row g-0">
-                                                    <div class="col-12">
-                                                      <p class="text_not"><a href="#" class="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae nam blanditiis optio soluta cupiditate porro.</a></p>
-                                                    </div>
-                                                </div>
+                        <!--INICIO DAS NOTICÍAS-->
 
-                                        </div>
-                                        
-                                  </div>
-                        </div>
+                        <?php 
+                        
+                        
+                      
 
-                        <div class="col-12 col-lg-6 pb-5">
-                              <div class="predio_car">
-                                      <div class="container">
-                                            <div class="row">
-                                                    <div class="col-12">
-                                                          <p class="text_not"><a href="#" class="text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque repudiandae nam blanditiis optio soluta cupiditate porro.</a></p>
-                                                    </div>
-                                            </div>
-                                      </div>
-                              </div>
-                        </div>
+                                      $args = array(
+                                        'post_type' => 'post',
+                                        'post_status' => 'publish',
+                                        'category_name' => 'noticias',
+                                        'posts_per_page' => 2,
+                                      );
+                                      $arr_posts = new WP_Query( $args );
+
+                                      if ( $arr_posts->have_posts() ) :
+
+                                        while ( $arr_posts->have_posts() ) :
+                                            $arr_posts->the_post();
+                                            ?>
+                                            <div class="col-12 col-lg-6 pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                               
+                                            <!-- -->
+                                                
+
+                                                <div class="predio_metal">
+
+                                               
+
+                                                      <div class="container">
+
+                                                            <div class="row g-0">
+
+
+                                                                    <div class="col-12">
+                                                                          <p class="text_not"><a class="text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title() ?></a></p>
+                                                                    </div>
+
+                                                            </div>
+
+
+                                                      </div>
+
+                                                </div> 
+                                                
+                                              </div>
+                                            <?php
+                                        endwhile;
+                                      endif;
+
+
+
+                        
+                        
+                        
+                        
+                        ?>
+
+                      
+                       
+  
                         <!--FIM  DAS NOTÍCIAS-->
 
 
                         <!--INICIO DOS COMUNICADOS-->
+                        
 
-                        <div class="col-md-3  pb-5">
-                              <div class="card rounded-top">
-                                  <img src="<?php echo get_stylesheet_directory_uri();?>/img/comunicado1.png" alt="Comunicado 1" class="rounded-top img-fluid">
-                                  <div class="card-body">
-                                    <h5 class="text-center pt-4"><a href="#" class="text-decoration-none text_comunicados">CFM informa que X-men não será exibido</a></h5>
+                        <?php
+                        
+                        
+                        
+                        $args = array(
+                          'post_type' => 'post',
+                          'post_status' => 'publish',
+                          'category_name' => 'comunicados',
+                          'posts_per_page' => 4,
+                      );
+                      $arr_posts = new WP_Query( $args );
+                        
+                      if ( $arr_posts->have_posts() ) :
+                        
+                          while ( $arr_posts->have_posts() ) :
+                              $arr_posts->the_post();
+                              ?>
+                              <div class="col-md-3  pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                  
+
+                                  <div class="card rounded-top">
+                                        <?php
+                                        if ( has_post_thumbnail() ) :
+                                            the_post_thumbnail();
+                                        endif;
+                                        ?>
+                                    <!--rounded-top img-fluid--->
+                                        <div class="card-body">
+                                          <h5 class="text-center pt-4"><a class="text-decoration-none text_comunicados" href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
+                                        </div>
                                   </div>
                               </div>
-                        </div>
+                              <?php
+                          endwhile;
+                      endif;
+                        
+                        ?>
 
-
-                        <div class="col-md-3 pb-5">
-                              <div class="card rounded-top">
-                                <img src="<?php echo get_stylesheet_directory_uri();?>/img/comunicado2.png" alt="Comunicado 1" class="rounded-top img-fluid">
-                                <div class="card-body">
-                                  <h5 class="text-center pt-4 text_comunicados"><a href="#" class="text-decoration-none text_comunicados">CFM informa que apenas flores serão dadas</a></h5>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-3 pb-5">
-                              <div class="card rounded-top">
-                                <img src="<?php echo get_stylesheet_directory_uri();?>/img/comunicado3.png" alt="Comunicado 1" class="rounded-top img-fluid">
-                                <div class="card-body">
-                                  <h5 class="text-center pt-4 text_comunicados"><a href="#" class="text-decoration-none text_comunicados">Conselho Nacional de Justiça, informa da dengue</a></h5>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-3 pb-5">
-                              <div class="card rounded-top">
-                                <img src="<?php echo get_stylesheet_directory_uri();?>/img/comunicado4.png" alt="Comunicado 1" class="rounded-top img-fluid">
-                                <div class="card-body">
-                                  <h5 class="text-center pt-4 text_comunicados"><a href="#" class="text-decoration-none text_comunicados">Hytighathar Noham fala sobre árvores no centro-oeste</a></h5>
-                                </div>
-                            </div>
-                        </div>
+                    
                     <!--FIM DOS COMUNICADOS-->
 
                 </div>
@@ -289,11 +331,35 @@
 
                           <div>
                                   <ul class="list-group list-group-flush">
-                                       <li class="list-group-item"><a class="text_manual_central" href="#">Manual do Advogado.PDF</a><br><p class="text-secondary">06/03/2021 - 15h:30</p></li>
-                                       <li class="list-group-item"><a class="text_manual_central" href="#">Manual do Advogado.PDF</a><br><p class="text-secondary">06/03/2021 - 15h:30</p></li>
-                                       <li class="list-group-item"><a class="text_manual_central" href="#">Manual do Advogado.PDF</a><br><p class="text-secondary">06/03/2021 - 15h:30</p></li>
-                                       <li class="list-group-item"><a class="text_manual_central" href="#">Manual do Advogado.PDF</a><br><p class="text-secondary">06/03/2021 - 15h:30</p></li>
-                                       
+                                  <?php 
+
+                                              $args = array(
+                                                'post_type' => 'post',
+                                                'post_status' => 'publish',
+                                                'category_name' => 'manuais',
+                                                'posts_per_page' => 4,
+                                              );
+                                              $arr_posts = new WP_Query( $args );
+
+                                              if ( $arr_posts->have_posts() ) :
+
+                                                while ( $arr_posts->have_posts() ) :
+                                                    $arr_posts->the_post();
+                                                    ?>
+
+
+
+                                                  
+
+                                                          <li class="list-group-item"><a class="text_manual_central" href="<?php the_permalink(); ?>"><?php the_title() ?></a><p class="text-secondary"><?php the_time( 'd-m-Y' )?> - <?php the_time( 'G:i' ) ?> </p></li>
+
+
+                           
+                                                    <?php
+                                                endwhile;
+                                              endif;
+                                      ?>
+                                      
                                   </ul>
                           </div>
 
@@ -311,7 +377,51 @@
 
 <!--FIM DA PARTE DOS MANUAIS DO CFM-->
 
+<?php  
 
+$args = array(
+  'post_type' => 'post',
+  'post_status' => 'publish',
+  'category_name' => 'wordpress',
+  'posts_per_page' => 4,
+);
+$arr_posts = new WP_Query( $args );
+
+if ( $arr_posts->have_posts() ) :
+
+  while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+      ?>
+      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+         
+      <div class="accordion-item mt-3 box_faq">
+          <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <p class="m-0 text_faq"><?php the_title() ?></p>
+          </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"><?php the_content()?></div>
+          </div>
+
+       </div>
+
+
+
+  </div>
+      <?php
+  endwhile;
+endif;
+
+
+
+
+
+
+
+
+
+?>
 
 
   <!--INICIO DA PARTE DO FAQ DE PERGUNTAS FREQUENTES-->
@@ -403,6 +513,7 @@
 
 
  <!--FOOTER ESTAVA AQUI-->
+
  <?php get_footer(); ?>
 
 </body>

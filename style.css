@@ -437,6 +437,18 @@ h2.titulo_icon a {
   height: 382px;
 }
 
+.wp-post-image
+{
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+
 
 
 .text_not {
@@ -465,7 +477,20 @@ h2.titulo_icon a {
     ),
     url(img/predioCaracol.png) center center/cover no-repeat;
     cursor: pointer;
-  height: 382px;
+}
+
+.imagem_predios > img
+{
+  background: linear-gradient
+  (
+      115.59deg,
+      #1f1a18 0%,
+      rgba(31, 26, 24, 0.8) 47.63%,
+      rgba(31, 26, 24, 0) 100%,
+      rgba(31, 26, 24, 0.7) 100%
+  );
+  cursor: pointer;
+  height: 382px !important;
 }
 
 /*INICIO DAS NOTICIAS*/

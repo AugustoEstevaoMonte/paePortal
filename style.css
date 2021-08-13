@@ -398,6 +398,13 @@ ul.list-unstyled li a {
   font-weight: 500;
   font-size: 36px;
 }
+.title_cus
+{
+  color: black;
+  font-weight: 500;
+  font-size: 48px;
+  text-transform: capitalize !important;
+}
 
 .titulo_icon {
   font-size: 16px;
@@ -424,18 +431,7 @@ h2.titulo_icon a {
   background-color: white;
 }
 
-.predio_metal {
-  background: linear-gradient(
-      115.59deg,
-      #1f1a18 0%,
-      rgba(31, 26, 24, 0.8) 47.63%,
-      rgba(31, 26, 24, 0) 100%,
-      rgba(31, 26, 24, 0.7) 100%
-    ),
-    url(img/predioMetal.png) center center/cover no-repeat;
-    cursor: pointer;
-  height: 382px;
-}
+
 
 .wp-post-image
 {
@@ -443,9 +439,46 @@ h2.titulo_icon a {
   border-top-right-radius: 0.25rem !important;
   max-width: 100%;
   height: auto;
-  vertical-align: middle !important;
-  width: auto !important;
+  width: 660px !important;
   height: auto !important;
+  display: block !important;
+}
+
+.fade_test
+{
+  position: relative;
+  float: left;
+}
+
+.title_test
+{
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  text-align: center !important;
+  z-index: 2;
+}
+
+.fade_test:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    115.59deg,
+    #1f1a18 0%,
+    rgba(31, 26, 24, 0.8) 47.63%,
+    rgba(31, 26, 24, 0) 100%,
+    rgba(31, 26, 24, 0.7) 100%
+  );
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+  z-index: 1;
+
 }
 
 
@@ -454,8 +487,8 @@ h2.titulo_icon a {
 .text_not {
   font-size: 24px;
   font-weight: bold;
-  padding-top: 240px;
   padding-left: 20px;
+  margin-bottom: 0 !important;
 }
 
 .text_not a {
@@ -467,31 +500,8 @@ h2.titulo_icon a {
   color: #32A683;
 }
 
-.predio_car {
-  background: linear-gradient(
-      115.59deg,
-      #1f1a18 0%,
-      rgba(31, 26, 24, 0.8) 47.63%,
-      rgba(31, 26, 24, 0) 100%,
-      rgba(31, 26, 24, 0.7) 100%
-    ),
-    url(img/predioCaracol.png) center center/cover no-repeat;
-    cursor: pointer;
-}
 
-.imagem_predios > img
-{
-  background: linear-gradient
-  (
-      115.59deg,
-      #1f1a18 0%,
-      rgba(31, 26, 24, 0.8) 47.63%,
-      rgba(31, 26, 24, 0) 100%,
-      rgba(31, 26, 24, 0.7) 100%
-  );
-  cursor: pointer;
-  height: 382px !important;
-}
+
 
 /*INICIO DAS NOTICIAS*/
 /*INICIO DOS COMUNICADOS*/
@@ -509,8 +519,8 @@ h2.titulo_icon a {
   .text_not {
     font-size: 18px;
     font-weight: bold;
-    padding-top: 240px;
     padding-left: 5px;
+    margin: 0 !important;
   }
   .text_not a {
     color: white;

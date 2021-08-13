@@ -18,6 +18,41 @@ add_theme_support('menus');
 add_theme_support( 'post-thumbnails' ); 
 
 
+//CRIA A CATEGORIA DAS NOTICIAS
+
+add_action('init', 'create_post_type_noticias');
+function create_post_type_noticias()
+{
+  register_post_type(
+    'noticias',
+    array(
+      'labels' => array(
+        'name' => __('Notícias'),
+        'singular_name' => __('Notícias')
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+} 
 
 
-?>
+
+//CRIA A CATEGORIA DE COMUNICADOS
+
+add_action('init', 'create_post_type_comunicados');
+function create_post_type_comunicados()
+{
+  register_post_type(
+    'comunicados',
+    array(
+        'taxonomies' => array('comunicados'),
+        'labels' => array(
+        'name' => __('Comunicados'),
+        'singular_name' => __('Comunicados')
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}

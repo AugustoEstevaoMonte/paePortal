@@ -150,23 +150,19 @@
                                             <!-- -->
                                                 
 
-                                                <div class="predio_metal">
-
+                                                <div class="fade_test">
+                                                <a class="" href="<?php the_permalink() ?>"><?php
+                                                          if ( has_post_thumbnail() ) :
+                                                              the_post_thumbnail();
+                                                          endif;
+                                                ?></a>
                                                
 
-                                                      <div class="container">
+                                                     
 
-                                                            <div class="row g-0">
+                                                                          <p class="text_not "><a class="text-decoration-none title_test" href="<?php the_permalink(); ?>"><?php the_title() ?></a></p>
+                                                                    
 
-
-                                                                    <div class="col-12">
-                                                                          <p class="text_not"><a class="text-decoration-none" href="<?php the_permalink(); ?>"><?php the_title() ?></a></p>
-                                                                    </div>
-
-                                                            </div>
-
-
-                                                      </div>
 
                                                 </div> 
                                                 
@@ -374,54 +370,10 @@
 
 
 
-
+                                            
 <!--FIM DA PARTE DOS MANUAIS DO CFM-->
 
-<?php  
 
-$args = array(
-  'post_type' => 'post',
-  'post_status' => 'publish',
-  'category_name' => 'wordpress',
-  'posts_per_page' => 4,
-);
-$arr_posts = new WP_Query( $args );
-
-if ( $arr_posts->have_posts() ) :
-
-  while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-      ?>
-      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-         
-      <div class="accordion-item mt-3 box_faq">
-          <h2 class="accordion-header" id="flush-headingTwo">
-          <button class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  <p class="m-0 text_faq"><?php the_title() ?></p>
-          </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body"><?php the_content()?></div>
-          </div>
-
-       </div>
-
-
-
-  </div>
-      <?php
-  endwhile;
-endif;
-
-
-
-
-
-
-
-
-
-?>
 
 
   <!--INICIO DA PARTE DO FAQ DE PERGUNTAS FREQUENTES-->
@@ -444,54 +396,47 @@ endif;
 
                                   <div class="accordion accordion-flush" id="accordionFlushExample">
 
-                                    
-                                          <div class="accordion-item box_faq">
-                                                <h2 class="accordion-header" id="flush-headingOne">
-                                                  <button class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                    <p class="m-0 text_faq">Lorem ipsum?</p>
-                                                  </button>
-                                                </h2>
-                                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                  <div class="accordion-body ">Placeholder content for this accordion, which is intended to demonstrate the class. This is the first item's accordion body.</div>
+
+
+                                  <?php  
+
+                                              $args = array(
+                                                'post_type' => 'post',
+                                                'post_status' => 'publish',
+                                                'category_name' => 'FAQ',
+                                                'posts_per_page' => 4,
+                                              );
+                                              $arr_posts = new WP_Query( $args );
+
+                                              if ( $arr_posts->have_posts() ) :
+
+                                                while ( $arr_posts->have_posts() ) :
+                                                    $arr_posts->the_post();
+                                                    ?>
+                                                    <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                                                      
+                                                    <div class="accordion-item mt-3 box_faq">
+                                                        <h2 class="accordion-header" id="flush-heading<?php the_ID(); ?>">
+                                                        <button class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="flush-collapse<?php the_ID(); ?>">
+                                                                <p class="m-0 text_faq"><?php the_title() ?></p>
+                                                        </button>
+                                                        </h2>
+
+
+                                                        <div id="flush-collapse<?php the_ID(); ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                                          <div class="accordion-body"><?php the_content()?></div>
+                                                        </div>
+
+                                                    </div>
+
+
+
                                                 </div>
-                                          </div>
+                                                    <?php
+                                                endwhile;
+                                              endif;
 
-
-                                          <div class="accordion-item mt-3 box_faq">
-                                                <h2 class="accordion-header" id="flush-headingTwo">
-                                                  <button class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                                    <p class="m-0 text_faq">Lorem ipsum?</p>
-                                                  </button>
-                                                </h2>
-                                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                                                </div>
-                                          </div>
-
-
-                                          <div class="accordion-item mt-3 box_faq">
-                                                <h2 class="accordion-header" id="flush-headingThree">
-                                                  <button class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                                    <p class="m-0 text_faq">Lorem ipsum?</p>
-                                                  </button>
-                                                </h2>
-                                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                                </div>
-                                          </div>
-
-                                          <div class="accordion-item mt-3 box_faq">
-                                            <h2 class="accordion-header" id="flush-headingFour">
-                                              <button class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                                <p class="m-0 text_faq">Lorem ipsum?</p>
-                                              </button>
-                                            </h2>
-                                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                                            </div>
-                                      </div>
-
-
+                                              ?>
                                   </div>
 
                             </div>

@@ -30,7 +30,7 @@
   <!--INICIO DO MENU-->
   <nav id="nav">
 
-  <header class="header_2">
+  <header class="header_2 shadow">
 
 
 

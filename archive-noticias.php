@@ -9,7 +9,7 @@
 
           <div class="row">
                 <div class="col-12">
-                       <h1><?php the_title()?></h1>
+                       <h1 class="title_cus"><?php the_title()?></h1>
                        <p><?php the_time( 'd/m/Y' )?> - <?php the_time( 'G:i' ) ?></p>
                 </div>
           </div>

@@ -16,241 +16,51 @@ Version: 1.0
   background-color: #006144;
 }
 
-.menu_principal {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.menu_principal > .nav-item:hover {
-  background-color: #004F37;
-}
-
-.menu_principal li {
-  display: inline-block;
-}
-
-.menu_principal li:hover {
-  cursor: pointer;
-}
-
-
-.menu_principal li a {
-  display: block;
-  padding: 15px 30px;
+.menu_principal_teste > li > a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
 }
+
+/*MODIFICA O CSS DO WORDPRESS*/
+.wp-post-image {
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
+  max-width: 100%;
+  height: auto;
+  width: 660px;
+  height: auto;
+  display: block !important;
+}
+/*FIM DO MODIFICADOR DE CSS DO WORDPRESS*/
+
+/*CSS DO FOOTER*/
+.display_sm_redes_sociais {
+  display: none;
+}
+
+.social_imgs {
+  align-items: center !important;
+  display: flex;
+}
+
+.social_imgs > a > img {
+  height: 40px;
+  margin-left: 15px;
+  display: inline-block;
+  max-width: 100%;
+}
+.bg_black {
+  background-color: #3f4447;
+}
+/*FIM DO CSS DO FOOTER*/
+
+.icone_titulo_categorias {
+  padding: 0 11px 0 0;
+}
+
 .menu {
   background-color: #006144;
 }
-
-.menu-lista li {
-  padding: 0 39px;
-}
-
-.menu-lista li a {
-  color: white !important;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1em;
-}
-
-.colW {
-  background-color: red;
-}
-
-@media (max-width: 992px) {
-  .menu-lista li {
-    padding: 10px 0px 10px 0px;
-  }
-  .menu-lista li a {
-    font-size: 16px;
-    font-weight: bold;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1385px) {
-  .menu-lista li {
-    padding: 0 5px;
-  }
-}
-/*Sub-menu dentro de sub-menu*/
-.nav-item .sub-menu
-{
-  display: none;
-  padding-left: 0px;
-  color: black !important;
-}
-
-.nav-item:hover .sub-menu
-{
-  display: block;
-  background-color: white;
-  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 10%);
-  border-radius: 0px 0px 10px 10px;
-  min-width: 10rem !important;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background-clip: padding-box;
-  min-height: auto;
-  position: absolute;
-  z-index: 1000;
-  margin-top: -2px !important;
-}
-
-.nav-item .sub-menu .menu-item > a
-{
-  color: black;
-  display: block;
-  text-align: start;
-}
-
-.nav-item .sub-menu .menu-item > a:hover
-{
-  color: white;
-  background-color: #0D825F;
-}
-
-.nav-item .sub-menu .menu-item .sub-menu
-{
-  display: none;
-  position: absolute;
-  padding-left: 0px;
-}
-
-.nav-item .sub-menu .menu-item:hover .sub-menu
-{
-  display: block;
-  padding-left: 0px;
-  left: 105px;
-  margin-top: -20px;
-}
-
-.nav-item .sub-menu  > li
-{
-  display: block;
-  width: 100%;
-  padding: 0.25rem 1.5rem;
-  clear: both;
-  text-align: inherit;
-  white-space: nowrap;
-  border: 0;
-}
-
-
-/*Sub-menu dentro de sub-menu*/
-
-/*INICIO DO BTN MOBILE*/
-#btn_mobile
-{
-  display: none;
-  border-style: none;
-  background-color: black;
-  color: white;
-}
-@media (max-width: 720px)
-{
-  .menu_principal
-  {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 0px;
-    transition: .6s !important;
-    background-color: #006144;
-    z-index: 988;
-    visibility: hidden;
-    overflow-y: hidden;
-  }
-
-  #nav.active .menu_principal
-  {
-    display: flex;
-    visibility: visible;
-    height: calc(100vh - 280px);
-    flex-direction: column;
-    overflow-y: auto;
-  }
-
-  .menu_principal li > a
-  {
-    padding: 1rem 0;
-    margin: 0 1rem;
-    border-bottom: 2px solid rgba(0,0,0,.05);
-  }
-
-  #btn_mobile
-  {
-    display: flex;
-    cursor: pointer;
-    font-size: 1rem;
-    border: none;
-    background: none;
-    padding: .5rem 1rem;
-    gap: 1.5rem;
-  }
-
-  #hamburguer
-  {
-    width: 20px;
-    border-top: 2px solid !important;
-  }
-  #hamburguer::after, #hamburguer::before
-  {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 2px;
-    margin-top: 5px;
-    background-color: currentColor !important;
-    transition: .3s;
-    position: relative;
-  }
-
-  #nav.active #hamburguer
-  {
-    border-top-color: transparent !important;
-
-  }
-
-  #nav.active #hamburguer::after
-  {
-    transform: rotate(135deg);
-  }
-
-  #nav.active #hamburguer::before
-  {
-    transform: rotate(-135deg);
-    top: 7px;
-  }
-
-  .menu_wrapper
-  {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
-  }
-  .nav-item:hover .sub-menu
-    {
-      min-width: 10rem !important;
-      padding: 0.25rem 0;
-      margin: 0.125rem 0 0;
-      margin-top: -2px !important;
-      left: 15%;
-    }
-
-  .nav-item .sub-menu .menu-item > a
-    {
-      color: black;
-      display: block;
-      text-align: start;
-      font-size: 14px;
-    }
-
-}
-/*FIM DO BTN MOBILE*/
 
 /*INICIO DA PARTE MODIFICADA DO WORDPRESS*/
 ul.list-unstyled li {
@@ -266,151 +76,152 @@ ul.list-unstyled li a {
     border-color 0.15s ease-in-out;
 }
 
-@media (max-width: 992px) {
-  ul.list-unstyled li {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0 15px;
-  }
-
-  ul.list-unstyled li a {
-    text-decoration: none !important;
-    padding: 0.5rem 1rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out;
-  }
-}
-
-@media (min-width: 992px) {
-}
-
-/*TENTATIVA DE DROPDOWN*/
-
-/*FIM DA TENTATIVA DE DROPDOWN*/
-
 /*FIM DA PARTE MODIFICADA DO WORDPRESS*/
 
-/*INICIO DO HERO BANNER DO CFM*/
-.hero_title {
-  color: white;
+/*INICIO DO TITULO QUE SE MOSTRA NO TAMANHO SM*/
+.titulo_acesso_rapido {
+  color: #006144;
   font-weight: 500;
-  font-size: 2.25em;
+  margin-top: 25px;
+  font-size: 26px;
+  margin-bottom: 25px;
 }
 
-.title_margin {
-  padding-top: 156px;
-  padding-left: 95px;
+.display_none_sm {
+  display: none;
 }
+/*FIM DO TITULO QUE SE MOSTRA NO TAMANHO SM*/
 
-.btn_saiba {
-  background: white;
-  color: #0d825f;
+/*INICIO DO HERO BANNER CFM E DO NIVO*/
+
+/*Conserta um bug com as imagens cortando*/
+.nivo-main-image {
+  z-index: 6;
+}
+/*Conserta um bug com as imagens cortando*/
+
+/*PARTE QUE CONTROLA AS SETAS INFERIORES DO NIVO*/
+.theme-default .nivo-controlNav a {
+  width: 13px;
+  height: 13px;
+  background: #00b38e;
   border-radius: 30px;
-  font-size: 18px;
-  padding-right: 30px;
-  padding-left: 30px;
-  font-weight: bold;
-  margin-left: 96px !important;
-  margin-top: 33px;
+  line-height: 0;
+  font-size: 0px;
+  padding: 5px;
+  margin-right: 10px;
+  float: center;
 }
 
-@media (max-width: 576px) {
-  .hero_title {
-    color: white;
-    font-weight: 500;
-    font-size: 1.6em;
-  }
-  .title_margin {
-    padding-top: 160px;
-    padding-left: 50px;
-  }
-  .btn_saiba {
-    font-size: 16px;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-left: 50px !important;
-    margin-top: 20px;
-  }
+.theme-default .nivo-controlNav a.active {
+  background-color: #bfe4dc;
+}
+/*PARTE QUE CONTROLA AS SETAS INFERIORES DO NIVO*/
+
+/*PARTE DAS SETAS DOS SLIDERS NIVO*/
+
+.svg-inline--fa {
+  height: 5em !important;
+  width: 2em !important;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1399px) {
-  .img_section {
-    background: linear-gradient(
-        97.51deg,
-        rgba(0, 129, 90, 0.4) 0%,
-        rgba(255, 255, 255, 0.2) 52.09%,
-        rgba(55, 131, 193, 0.6) 100%
-      ),
-      url(/img/hero-pae.png) center center/cover no-repeat;
-    height: 545px !important;
-  }
+.nivo-directionNav > a {
+  color: #00b38e;
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .img_section {
-    background: linear-gradient(
-        97.51deg,
-        rgba(0, 129, 90, 0.4) 0%,
-        rgba(255, 255, 255, 0.2) 52.09%,
-        rgba(55, 131, 193, 0.6) 100%
-      ),
-      url(img/hero-pae.png) center center/cover no-repeat;
-    height: 666px !important;
-  }
+.nivo-directionNav > a:hover {
+  color: #01986f;
 }
 
-.img_section {
+.nivo-directionNav > a > i {
+  width: 20px;
+  height: 20px;
+  text-indent: -9999px;
+}
+
+.nivo-caption {
+  font-size: 20px;
+  font-family: 'Baloo 2', cursive !important;
+  font-weight: 700;
+  background-color: #32a683;
+}
+
+.nivo-caption:hover {
+  background-color: #01986f;
+}
+
+/*INICIO DO TORNA LINK DAS IMAGENS CLICAVEIS*/
+.nivoSlider a.nivo-imageLink {
+  background: white;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/*FIM DO TORNA LINK DAS IMAGENS CLICAVEIS*/
+
+/*FIM DO HERO BANNER DO CFM E DO NIVO*/
+
+/*INICIO DO CSS DO ACESSO RÁPIDO*/
+
+.flex_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.menu-acesso-rapido-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu_acesso_rapido {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.box_color_and_properties {
+  text-align: center !important;
+  width: 50%;
+}
+.box_color_and_properties a {
+  width: 100%;
+  padding: 22px 0 !important;
+  display: inline-block;
+  border-radius: 10px;
   background: linear-gradient(
-      97.51deg,
-      rgba(0, 129, 90, 0.4) 0%,
-      rgba(255, 255, 255, 0.2) 52.09%,
-      rgba(55, 131, 193, 0.6) 100%
-    ),
-    url(img/hero-pae.png) center center/cover no-repeat;
-  height: 492px;
+    138deg,
+    #004f37 0.59%,
+    #2b7b62 0.6%,
+    #00815a 54.96%,
+    #32a683 100%
+  );
 }
 
-/*FIM DO HERO BANNER DO CFM*/
-.box_acesso {
-  background-color: #0d825f;
-  border-radius: 10px;
-  display: inline-block;
-  padding: 22px 0;
+.wrapper_flex_container {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.box-maior {
-  padding: 22px 0;
-  display: inline-block;
-  background-color: #0d825f;
-  border-radius: 10px;
+.menu_acesso_rapido > div > div > a {
+  color: white;
+  text-decoration: none;
 }
 
-.colH {
-  background-color: yellow;
+.menu_acesso_rapido > div > div:last-child {
+  width: 100%;
 }
 
-.icone_tit {
-  padding: 0 11px 0 0;
-}
-
-.titulo {
+.titulo_principal_das_categorias {
   color: #006144;
   font-weight: 500;
   font-size: 36px;
-}
-.title_cus
-{
-  color: black;
-  font-weight: 500;
-  font-size: 48px;
-  text-transform: capitalize !important;
-}
-
-.titulo_icon {
-  font-size: 16px;
-  color: white;
-  font-weight: 500;
-  text-align: center;
 }
 
 .acesso_rapido .ar_wrapper:nth-child(even) {
@@ -425,43 +236,23 @@ h2.titulo_icon a {
   color: white !important;
   text-decoration: none !important;
 }
+/*FIM DO CSS DO ACESSO RÁPIDO*/
 
-/*INICIO DAS NOTICIAS*/
+/*INICIO DO CSS DE NOTICIAS*/
 .bg_white {
   background-color: white;
 }
 
-
-
-.wp-post-image
-{
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
-  max-width: 100%;
-  height: auto;
-  width: 660px !important;
-  height: auto !important;
-  display: block !important;
+.fade_img_noticias_black > a > img {
+  width: 720px;
 }
 
-.fade_test
-{
+.fade_img_noticias_black {
   position: relative;
   float: left;
 }
 
-.title_test
-{
-  position: absolute;
-  bottom: 120px;
-  left: 0;
-  right: 0;
-  text-align: center !important;
-  z-index: 2;
-}
-
-.fade_test:before
-{
+.fade_img_noticias_black:before {
   content: '';
   position: absolute;
   top: 0;
@@ -478,76 +269,52 @@ h2.titulo_icon a {
   border-top-left-radius: 0.25rem !important;
   border-top-right-radius: 0.25rem !important;
   z-index: 1;
-
 }
 
+.position_text_into_image {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  right: 10px;
+  text-align: center !important;
+  z-index: 2;
+}
 
-
-
-.text_not {
+.texto_noticias {
   font-size: 24px;
   font-weight: bold;
   padding-left: 20px;
   margin-bottom: 0 !important;
+  transition: 0.3s all ease;
 }
 
-.text_not a {
+.texto_noticias a {
   color: white;
 }
 
-.text_not a:hover
-{
-  color: #32A683;
+.texto_noticias a:hover {
+  color: #cccccc !important;
 }
 
+/*FIM DO CSS  DAS NOTICIAS*/
 
-
-
-/*INICIO DAS NOTICIAS*/
 /*INICIO DOS COMUNICADOS*/
-.text_comunicados {
+.texto_card_comunicados {
   color: #0d825f;
   font-size: 18px;
   font-weight: bold;
 }
 
-.text_comunicados:hover {
-  color: black !important;
-}
-
-@media (max-width: 576px) {
-  .text_not {
-    font-size: 18px;
-    font-weight: bold;
-    padding-left: 5px;
-    margin: 0 !important;
-  }
-  .text_not a {
-    color: white;
-  }
+.texto_card_comunicados:hover {
+  color: #32a683 !important;
 }
 
 /*INICIO DO PAE CFM EM NÚMEROS*/
-.text_aument {
-  font-size: 64px;
-  color: white;
-  line-height: 76px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.text_lower {
+.texto_box_dados_menor {
   font-size: 30px;
   color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.text_p {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 28px;
-  color: white;
-  margin-right: 50px !important;
-  margin-left: 50px !important;
 }
 
 .box_dados {
@@ -562,25 +329,27 @@ h2.titulo_icon a {
   border-radius: 10px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.5s all ease-in-out;
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  .text_aument {
-    font-size: 36px;
-  }
-  .text_lower {
-    font-size: 18px;
-  }
-}
-
-.shad_img {
-  -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-  background-color: none !important;
+.box_dados:hover {
+  transform: scale(1.2);
+  background: linear-gradient(
+    137.42deg,
+    #164134 1.09%,
+    #215444 47.83%,
+    #056e4e 100%
+  );
 }
 
 /*FIM DO PAE CFM EM NÚMEROS*/
+
 /*INICIO DA ESTILIZAÇÃO DOS MANUAIS DO CFM*/
+
+.list-group-flush > li:last-child {
+  margin-bottom: 40px;
+}
+
 .text_manual_central {
   font-weight: 500;
   font-size: 20px;
@@ -592,6 +361,7 @@ h2.titulo_icon a {
 }
 
 /*FIM DA ESTILIZAÇÃO DOS MANUAIS DO CFM*/
+
 /*INICIO DA ESTILIZAÇÃO DO FAQ*/
 .box_faq {
   background: #00815a !important;
@@ -634,4 +404,535 @@ body {
 }
 /*# sourceMappingURL=style.css.map */
 
+/*INICIO DA CUSTOMIZAÇÃO DE NOTICIAS WP*/
+.text_time {
+  font-size: 20px;
+  line-height: 24px;
+}
 
+.contentNoticias {
+  font-size: 20px !important;
+}
+
+.btnVer {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: transparent;
+  transition: 0.2s all ease;
+}
+.btnVer > a {
+  color: #32a683 !important;
+}
+
+.tit_Noticias:hover {
+  text-decoration: underline;
+}
+
+.tit_Noticias > a {
+  color: #009468;
+}
+
+.tit_Para > a {
+  color: black !important;
+}
+
+.tit_Para > a:hover {
+  text-decoration: underline;
+}
+
+.btnVer:hover {
+  transform: scale(1.2);
+}
+
+.text_Dia {
+  font-size: 18px !important;
+}
+
+.menu_principal_teste > li > a {
+  color: white !important;
+}
+
+/*INICIO DA ESTILIZAÇÃO DO MENU BOOTSTRAP*/
+.dropdown-item {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.dropdown-menu {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #00815a;
+  background-color: transparent;
+}
+/*FIM DA ESTILIZAÇÃO DO MENU*/
+
+/*INICIO DOS MEDIAS QUERYS DO SITE*/
+
+@media (max-width: 575.98px) {
+  .margin_top_only_on_xs {
+    margin-top: 30px;
+  }
+
+  .card-body {
+    min-height: 160px;
+  }
+  .texto_card_comunicados {
+    font-size: 14px;
+  }
+  .box_dados:hover {
+    transform: scale(0.9);
+  }
+
+  .texto_paragrafo {
+    color: white;
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: calc(50px / 4);
+    margin-left: calc(50px / 4);
+  }
+
+  .menu_principal {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 0px;
+    transition: 0.6s !important;
+    background-color: #006144;
+    z-index: 988;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  /*CSS DO NIVO SLIDER*/
+
+  .theme-default .nivo-controlNav a {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    float: center;
+  }
+
+  .nivo-caption {
+    font-size: 16px;
+    font-family: 'Baloo 2', cursive !important;
+    font-weight: 700;
+    background-color: #32a683;
+  }
+
+  .nivoSlider {
+    height: calc(492px / 1.5);
+  }
+
+  .nivoSlider > img {
+    height: calc(492px / 1.5) !important;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+  }
+
+  /*FIM DO CSS DO NIVO SLIDER*/
+
+  .display_show_on_sm {
+    display: block;
+  }
+  .texto_noticias {
+    font-size: 16px;
+  }
+  .text_faq {
+    font-size: 16px;
+  }
+  .titulo_principal_das_categorias {
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  .text_manual_central {
+    font-size: 18px;
+  }
+
+  .display_sm_redes_sociais {
+    display: block;
+  }
+
+  .hero_title {
+    color: white;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
+
+  .title_margin {
+    padding-top: 160px;
+    padding-left: 50px;
+  }
+  .btn_saiba {
+    font-size: 16px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: 50px !important;
+    margin-top: 20px;
+  }
+
+  .btnVer:hover {
+    transform: none !important;
+  }
+
+  .texto_noticias {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 5px;
+    margin: 0 !important;
+  }
+  .texto_noticias a {
+    color: white;
+  }
+
+  .btnVer {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: transparent;
+    transition: 0.2s all ease;
+  }
+  .btnVer > a {
+    font-size: 14px;
+  }
+
+  .texto_noticias {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-bottom: 0 !important;
+    transition: 0.3s all ease;
+  }
+  .menu_principal_teste > li > a {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .menu_principal_teste > li:first-child > a {
+    margin-top: 20px;
+  }
+
+  .menu_principal_teste > li > a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .dropdown-item {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: #00815a;
+    background-color: transparent;
+  }
+  .dropdown-item {
+    padding: 0.5rem 0;
+  }
+}
+
+/*SM*/
+@media (min-width: 576px) {
+  .box_dados:hover {
+    transform: scale(0.9);
+  }
+
+  .menu_principal {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 0px;
+    transition: 0.6s !important;
+    background-color: #006144;
+    z-index: 988;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  /*CSS DO NIVO SLIDER*/
+
+  .theme-default .nivo-controlNav a {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    float: center;
+  }
+
+  .nivo-caption {
+    font-size: 16px;
+    font-family: 'Baloo 2', cursive !important;
+    font-weight: 700;
+    background-color: #32a683;
+  }
+
+  .nivoSlider {
+    height: calc(492px / 1.5);
+  }
+
+  .nivoSlider > img {
+    height: calc(492px / 1.5) !important;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+  }
+
+  /*FIM DO CSS DO NIVO SLIDER*/
+
+  .social_imgs > a > img {
+    margin-left: 18px;
+  }
+
+  .display_show_on_sm {
+    display: block;
+  }
+  /*CSS DOS COMUNICADOS*/
+  .card-body {
+    min-height: 30px;
+  }
+  /*CSS DOS COMUNICADOS*/
+
+  .titulo_principal_das_categorias {
+    font-size: 28px;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+  .text_manual_central {
+    font-size: 18px;
+  }
+
+  /*inicio do media query do text do card*/
+  .texto_box_dados_maior {
+    font-size: 28px;
+  }
+  .texto_box_dados_menor {
+    font-size: 18px;
+  }
+  .texto_paragrafo {
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+    margin-right: calc(50px / 4);
+    margin-left: calc(50px / 4);
+  }
+  /*fim do media query do text do card*/
+}
+
+/*MD*/
+@media (min-width: 768px) {
+  .menu_principal_teste > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .box_dados:hover {
+    transform: scale(1.2);
+    background: linear-gradient(
+      137.42deg,
+      #164134 1.09%,
+      #215444 47.83%,
+      #056e4e 100%
+    );
+  }
+
+  /*CSS DO NIVO SLIDER*/
+  .theme-default .nivo-controlNav a {
+    width: 13px;
+    height: 13px;
+    background: #00b38e;
+    border-radius: 30px;
+    line-height: 0;
+    font-size: 0px;
+    padding: 5px;
+    margin-right: 10px;
+    float: center;
+  }
+
+  .nivo-caption {
+    font-size: 20px;
+    font-family: 'Baloo 2', cursive !important;
+    font-weight: 700;
+    background-color: #32a683;
+  }
+
+  .nivo-caption:hover {
+    background-color: #01986f;
+  }
+
+  .nivoSlider {
+    height: 492px;
+  }
+
+  .nivoSlider > img {
+    height: 492px !important;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+  }
+
+  /*FIM DO CSS DO NIVO SLIDER*/
+
+  /*DISPLAY DO TITULO ACESSO RÁPIDO MENOR*/
+  .display_show_on_sm {
+    display: none;
+  }
+  /*fim do DISPLAY DO TITULO ACESSO RÁPIDO MENOR*/
+
+  /*DISPLAY DO TITULO ACESSO RÁPIDO MAIOR*/
+  .display_none_sm {
+    display: block;
+  }
+  /*FIM DISPLAY DO TITULO ACESSO RÁPIDO MAIOR*/
+
+  /*CSS DE COMUNICADOS*/
+  .card-body {
+    min-height: 160px;
+  }
+  .texto_card_comunicados {
+    font-size: 14px;
+  }
+  /*FIM DO CSS DE COMUNICADOS*/
+
+  /*CENTRALIZA A LOGO DO CFM*/
+  .logoPrincipalCFM {
+    display: block;
+    margin: 0 auto;
+  }
+  /*FIM DO CENTRALIZA LOGO*/
+
+  .titulo_principal_das_categorias {
+    color: #006144;
+    font-weight: 500;
+    margin-top: 0;
+    font-size: 36px;
+  }
+
+  /*MEDIA QUERY DO MENU*/
+  ul.list-unstyled li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 15px;
+  }
+
+  ul.list-unstyled li a {
+    text-decoration: none !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+  .menu-lista li {
+    padding: 10px 0px 10px 0px;
+  }
+  .menu-lista li a {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  /*FIM DO MEDIA QUERY DO MENU*/
+}
+
+/*LG*/
+@media (min-width: 992px) {
+  .box_color_and_properties a {
+    width: 100%;
+    padding: 36px 0 !important;
+    font-size: 0.8rem;
+  }
+  .menu_principal_teste > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 0;
+    margin-left: 25px;
+  }
+  /*inicio do media query do text do card*/
+  .texto_box_dados_maior {
+    font-size: 64px;
+    color: white;
+    line-height: 76px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .texto_box_dados_menor {
+    font-size: 20px;
+  }
+  .texto_paragrafo {
+    color: white;
+    font-size: 16px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  /*fim do media query do text do card*/
+
+  /*CSS DOS COMUNICADOS*/
+  .card-body {
+    min-height: 120px;
+  }
+  .texto_card_comunicados {
+    color: #0d825f;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  /*FIM DO CSS DOS COMUNICADOS*/
+
+  /*CENTRALIZA A LOGO DO CFM*/
+  .logoPrincipalCFM {
+    display: block;
+    margin: 0;
+  }
+  /*FIM DO CENTRALIZA LOGO*/
+}
+
+/*XL*/
+@media (min-width: 1200px) {
+  .box_color_and_properties a {
+    width: 100%;
+    padding: 34px 0 !important;
+    font-size: 1rem;
+  }
+
+  .menu_principal_teste > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  /*CSS DOS COMUNICADOS*/
+  .card-body {
+    min-height: 140px;
+  }
+
+  .texto_card_comunicados {
+    font-size: 18px;
+  }
+  /*FIM DO CSS DOS COMUNICADOS*/
+  .texto_paragrafo {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .menu_principal_teste > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+
+/*FIM DOS MEDIA QUERYS DO SITE*/

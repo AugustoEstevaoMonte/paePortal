@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,57 +10,79 @@
   <meta name="copyright" content="CFM">
   <meta name="robots" content="index, follow">
   <meta name="rating" content="general">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/lib/nivo-slider/themes/default/default.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/lib/nivo-slider/nivo-slider.css">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.css">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-  <title><?php bloginfo('name'); ?></title>
+  <?php
+  if (isset($args['titulo']) && !empty($args['titulo'])) {
+    $titulo = $args['titulo'];
+  } else {
+    $titulo = get_bloginfo('name');
+  }
+  ?>
+  <title><?php echo $titulo; ?></title>
 </head>
 
 <body>
 
-  <header class="bg_green">
+  <header class="bg_green logoCFM">
 
     <!--INICIO DA PARTE DE CIMA COM A LOGO DO CFM-->
-    <div class="container pt-4 pb-4">
-      <a href="/augusto/paePHP/wordpress/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logoCFMmaior.png" alt="Logo do Conselho Federal de Medicina" class="img-fluid"></a>
+    <div class="container-fluid container-lg pt-4 pb-4">
+        <a href="/augusto/paePHP/wordpress/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logoCFMmaior.png" alt="Logo do Conselho Federal de Medicina" class="img-fluid logoPrincipalCFM"></a>
     </div>
     <!--FIM DA PARTE DE CIMA COM A LOGO DO CFM-->
   </header>
 
   <!--INICIO DO MENU-->
-  <nav id="nav">
+    <header class="headerMenuPrincipal shadow">
 
-  <header class="header_2 shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark menu_wrapper">
+        <div class="container">
+              
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse inicio_do_menu_principal" id="navbarNavDropdown">
+                                  <?php
+                                      $args = array(
+                                        'menu' => 'principal',
+                                        'container' => true,
+                                        'menu_class' => 'navbar-nav menu_principal_teste',
+                                        'theme_location' => 'header-menu',
+                                        'depth'             => 2,
+                                        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                        'walker'            => new WP_Bootstrap_Navwalker(),
+                                      );
+                                      wp_nav_menu($args);
+                                 ?>
+                    </div>
+        </div>
+    </nav>
 
+    </header>
+    
 
-
-    <div class="container-fluid menu_wrapper">
-        <button id="btn_mobile">
-          <span id="hamburguer"></span>
-        </button>
-      <?php
-      $args = array(
-        'menu' => 'principal',
-        'container' => true,
-        'menu_class' => 'menu_principal'
-      );
-      wp_nav_menu($args);
-
-      // <li class="nav-item">
-      //<a class="nav-link" href="#">PAUTA DE JULGAMENTO<div class="setaCima"></div></span></a>
-      //</li>
-
-
-
-      
-      ?>
-
-
-
-    </div>
-
-
-    </div>
-
-  </header>
-</nav>
+<!--               <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown link
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                      </ul>-->

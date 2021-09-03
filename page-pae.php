@@ -1,5 +1,10 @@
 <?php
-// Template Name: Home do PAe - Processo Administrativo Eletrônico
+/**
+* Template Name: Home do PAe - Processo Administrativo Eletrônico
+*
+* @package CFM
+* @subpackage CFM_PAE
+*/
 ?>
 
 <?php get_header(); ?>
@@ -7,97 +12,93 @@
 
 
 
-<section class="mt-5">
+<section class="mt-md-5 HeroBanner_e_Acesso_Rapido">
     <div class="container">
       <div class="row">
 
-        <!--INICIO DO HERO-->
-        <div class="col-md-8 col-12 p-0">
-            <div class="img_section">
-                  <div class="row g-0">
-
-                         <div class="container">
-
-                              <div class="col-12">
-                                <h1 class="hero_title title_margin">Conheça o PAe<br><b>Processo Administrativo Eletrônico</b></h1>
-                                
-                              </div>
-
-                              <div class="col-lg-5 col-sm-8">
-                                <button class="btn btn_saiba">Saiba Mais</button>
-                              </div>
-
-                         </div>
-                  </div>
-
-            </div>
+        <div class="ar_wrapper col-12 display_show_on_sm">
+              <h1 class="titulo_acesso_rapido"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio"></img>Acesso Rápido</h1>
         </div>
-        <!--FIM DO HERO-->
-
-        <div class="col-sm-12 col-md-4">
 
 
-          <div class="row acesso_rapido g-0">
+        <div class="inicio_hero_banner col-12 col-lg-8  p-0 order-first order-1 order-sm-2 order-lg-1 margin_top_only_on_xs">
 
-            <!--INICIO DO TITULO ACESSO RÁPIDO-->
-            <div class="ar_wrapper col-12">
-              <h1 class="titulo"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_tit" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio"></img>Acesso Rápido</h1>
-            </div>
-            <!--FIM DO TITULO ACESSO RÁPIDO-->
+                  <div class="slide-wrapper theme-default">
 
+                      <div id="slider" class="nivoSlider">
+                        
+                      <?php 
 
+                                        $args = array(
+                                          'post_type' => 'Banner',
+                                          'post_status' => 'publish',
+                                          'posts_per_page' => 5,
+                                        );
+                                        $arr_posts = new WP_Query( $args );
 
-            <!--INICIO DAS CAIXAS QUE FICAM EMBAIXO DE ACESSO RÁPIDO-->
+                                        if ( $arr_posts->have_posts() ) :
 
+                                          while ( $arr_posts->have_posts() ) :
+                                              $arr_posts->the_post();
+                                              ?>
+                                                      <?php
+                                                                if ( has_post_thumbnail() ) :
+                                                                  $imageid = get_post_thumbnail_id( $post->ID );
+                                                                  $image_thumb = wp_get_attachment_image_src( $imageid, 'blog-page' );
+                                                                  $image_url = wp_get_attachment_url( $imageid );
+                                                                endif;
+                                                      ?>
+                                                      <a href="<?php the_permalink()?>" class="nivo-imageLink" target="_blank"><img src="<?php echo $image_thumb[0]; ?>" title="<?php the_title(); ?>"></a>
+                                                
 
-            <div class="ar_wrapper col-6">
-              <div class="box_acesso d-flex align-items-center justify-content-center py-auto h-100">
-                <img src="<?php echo get_stylesheet_directory_uri();?>/img/pae.svg" alt="" class="icon-box p-1">
-                <h2 class="titulo_icon"><a href="">Acesse o PAe</a></h2>
+                                               
+
+                                                
+                                              <?php
+                                          endwhile;
+                                        endif;  
+                        ?>
+                      </div>
+
               </div>
+        </div>
+                              
+
+        <div class="inicio_acesso_rapido col-12 col-lg-4 order-sm-1 order-lg-2">
+
+
+            <div class="row acesso_rapido g-0 ">
+
+
+            <div class="ar_wrapper col-12 display_none_sm">
+              <h1 class="titulo_principal_das_categorias"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio"></img>Acesso Rápido</h1>
             </div>
 
 
-            <div class="ar_wrapper col-6">
-              <div class="box_acesso d-flex align-items-center justify-content-center py-auto h-100">
-                <h2 class="titulo_icon"><img src="<?php echo get_stylesheet_directory_uri();?>/img/perguntas.svg" alt="" class="icon-box p-1"><a href="#">Perguntas Frequentes</a></h2>
-              </div>
+            <div class="inicio_dos_itens_do_acesso_rapido menu_acesso_rapido">
+                          <?php
+                                $args = array(
+                                  'menu' => 'principal',
+                                  'container' => 'div',
+                                  'menu_class' => 'row',
+                                  //'container_class'      => 'flex_container',
+                                  'theme_location' => 'extra-menu',
+                                  //'add_li_class'  => 'd-flex align-items-center justify-content-center py-auto h-100 box_color_and_properties mb-2 mt-2 wrapper_flex_container',
+                                  'add_li_class'  => 'col-6 box_color_and_properties p-2',
+                                  'items_wrap' => '%3$s',
+                                  'depth' => 0,
+                                  'walker' => new Custom_Nav_Walker()
+                                );
+
+                                wp_nav_menu($args);
+
+                    ?>
             </div>
 
 
-            <div class="ar_wrapper col-6">
-              <div class="box_acesso d-flex align-items-center justify-content-center py-auto h-100">
-                <h2 class="titulo_icon"><img src="<?php echo get_stylesheet_directory_uri();?>/img/tutoriais.svg" alt="" class="icon-box p-1"><a href="#">Tutoriais e Manuais</a></h2>
-              </div>
-            </div>
+          
 
 
-            <div class="ar_wrapper col-6">
-              <div class="box_acesso d-flex align-items-center justify-content-center py-auto h-100">
-                <h2 class="titulo_icon"><img src="<?php echo get_stylesheet_directory_uri();?>/img/pesquisa.svg" alt="" class="icon-box p-1"><a href="#">Pesquisa Processual</a></h2>
-              </div>
-            </div>
-
-
-            <div class="ar_wrapper col-6">
-              <div class="box_acesso d-flex align-items-center justify-content-center py-auto h-100">
-                <h2 class="titulo_icon"><img src="<?php echo get_stylesheet_directory_uri();?>/img/problemas.svg" alt="" class="icon-box p-1"><a href="#">Problemas Técnicos</a></h2>
-              </div>
-            </div>
-
-
-            <div class="ar_wrapper col-6">
-              <div class="box_acesso d-flex align-items-center justify-content-center py-auto h-100">
-                <h2 class="titulo_icon"><img src="<?php echo get_stylesheet_directory_uri();?>/img/contato.svg" alt="" class="icon-box p-1"><a href="#">Entre em Contato</a></h2>
-              </div>
-            </div>
-
-
-            <div class="ar_wrapper col-12 p-0 pt-2 pb-2">
-                <div class="box-maior d-flex align-items-center justify-content-center py-auto h-100">
-                  <h2 class="titulo_icon"><img src="<?php echo get_stylesheet_directory_uri();?>/img/calendario.svg" alt="" class="icon-box p-1"><a href="#">Calendário de Indisponibilidade</a></h2>
-                </div>
-            </div>
 
             <!--FIM DAS CAIXAS QUE FICAM EMBAIXO DE ACESSO RÁPIDO-->
 
@@ -115,17 +116,19 @@
   
     <!--INICIO DA PARTE DE NOTICIAS E COMUNICADOS DO CFM-->
     
-  <article class="bg_white mt-5">
+  <section class="bg_white mt-5">
           <div class="container">
                 <div class="row">
 
                         <div class="col-12">
-                            <h2 class="titulo pb-5 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_tit" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Notícias e Comunicados</h2>
+                            <h2 class="titulo_principal_das_categorias pb-3 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Notícias e Comunicados</h2>
+                        </div>
+
+                        <div class="mb-3 text-end col-12">
+                            <button class="btn btn-dark rounded-pill btnVer"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/noticias-2/">VER TODOS</a></button>
                         </div>
 
 
-
-                        <!--INICIO DAS NOTICÍAS-->
 
                         <?php 
                         
@@ -133,9 +136,8 @@
                       
 
                                       $args = array(
-                                        'post_type' => 'post',
+                                        'post_type' => 'Noticias',
                                         'post_status' => 'publish',
-                                        'category_name' => 'noticias',
                                         'posts_per_page' => 2,
                                       );
                                       $arr_posts = new WP_Query( $args );
@@ -145,12 +147,10 @@
                                         while ( $arr_posts->have_posts() ) :
                                             $arr_posts->the_post();
                                             ?>
-                                            <div class="col-12 col-lg-6 pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                                               
-                                            <!-- -->
+                                            <div class="inicio_das_noticias col-12 col-lg-6 pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                                 
 
-                                                <div class="fade_test">
+                                                <div class="fade_img_noticias_black">
                                                 <a class="" href="<?php the_permalink() ?>"><?php
                                                           if ( has_post_thumbnail() ) :
                                                               the_post_thumbnail();
@@ -160,7 +160,7 @@
 
                                                      
 
-                                                                          <p class="text_not "><a class="text-decoration-none title_test" href="<?php the_permalink(); ?>"><?php the_title() ?></a></p>
+                                                                          <p class="texto_noticias"><a class="text-decoration-none position_text_into_image" href="<?php the_permalink(); ?>"><?php the_title() ?></a></p>
                                                                     
 
 
@@ -179,23 +179,13 @@
                         
                         ?>
 
-                      
-                       
-  
-                        <!--FIM  DAS NOTÍCIAS-->
-
-
-                        <!--INICIO DOS COMUNICADOS-->
-                        
-
                         <?php
                         
                         
                         
                         $args = array(
-                          'post_type' => 'post',
+                          'post_type' => 'Comunicados',
                           'post_status' => 'publish',
-                          'category_name' => 'comunicados',
                           'posts_per_page' => 4,
                       );
                       $arr_posts = new WP_Query( $args );
@@ -205,7 +195,7 @@
                           while ( $arr_posts->have_posts() ) :
                               $arr_posts->the_post();
                               ?>
-                              <div class="col-md-3  pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                              <div class="inicio_dos_comunicados col-6 col-md-3  pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                   
 
                                   <div class="card rounded-top">
@@ -216,7 +206,7 @@
                                         ?>
                                     <!--rounded-top img-fluid--->
                                         <div class="card-body">
-                                          <h5 class="text-center pt-4"><a class="text-decoration-none text_comunicados" href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
+                                          <h5 class="text-center pt-4"><a class="text-decoration-none texto_card_comunicados" href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
                                         </div>
                                   </div>
                               </div>
@@ -231,7 +221,7 @@
 
                 </div>
           </div>
-  </article>
+  </section>
 
    <!--FIM DA PARTE DE NOTICIAS E COMUNICADOS DO CFM-->
 
@@ -245,7 +235,7 @@
                   <div class="row">
 
                       <div class="col-12">
-                            <h2 class="titulo pb-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_tit" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">PAe CFM em números</h2>
+                            <h2 class="titulo_principal_das_categorias pb-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">PAe em números</h2>
                       </div>
 
                       <div class="col-12 pb-4 col-sm-4">
@@ -254,8 +244,8 @@
                                         <div class="row g-0">
 
                                               <div class="col-12 text-center">
-                                                  <h2 class="text_lower pb-3"><b class="text_aument">+ 90 </b>MILHÕES</h2>
-                                                  <p class="text_p text-start">Lorem Ipsum Dolor est sit ametus Lorem ipsum dolor</p>
+                                                  <h2 class="texto_box_dados_menor pb-3"><b class="texto_box_dados_maior">+ 90 </b>MILHÕES</h2>
+                                                  <p class="texto_paragrafo text-start">Lorem Ipsum Dolor est sit ametus Lorem ipsum dolor</p>
                                               </div>
 
                                         </div>
@@ -270,8 +260,8 @@
                                       <div class="row g-0">
 
                                             <div class="col-12 text-center">
-                                                  <h2 class="text_lower pb-3"><b class="text_aument">+ 18 </b>BILHÕES</h2>
-                                                  <p class="text_p text-start">Lorem Ipsum Dolor est sit ametus Lorem ipsum dolor</p>
+                                                  <h2 class="texto_box_dados_menor pb-3"><b class="texto_box_dados_maior">+ 18 </b>BILHÕES</h2>
+                                                  <p class="texto_paragrafo text-start">Lorem Ipsum Dolor est sit ametus Lorem ipsum dolor</p>
                                             </div>
 
                                       </div>
@@ -286,8 +276,9 @@
                                   <div class="row g-0">
 
                                         <div class="col-12 text-center">
-                                            <h2 class="text_lower pb-3"><b class="text_aument">+ 20 </b>MILHÕES</h2>
-                                            <p class="text_p text-start">Lorem Ipsum Dolor est sit ametus Lorem ipsum dolor</p>
+                                            <h2 class="texto_box_dados_menor
+                                             pb-3"><b class="texto_box_dados_maior">+ 20 </b>MILHÕES</h2>
+                                            <p class="texto_paragrafo text-start">Lorem Ipsum Dolor est sit ametus Lorem ipsum dolor</p>
                                         </div>
 
                                   </div>
@@ -320,20 +311,25 @@
               <div class="row">
 
                     <div class="col-12">
-                        <h2 class="titulo pb-5 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_tit" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Manuais</h2>
+                        <h2 class="titulo_principal_das_categorias pb-5 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Manuais e Tutoriais</h2>
                     </div>
 
+                    
+
                     <div class="col-12">
+
+                    <div class="text-end mb-1 col-12">
+                      <button class="btn btn-dark rounded-pill btnVer"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/manuais-e-tutoriais/">VER TODOS</a></button>
+                    </div>
 
                           <div>
                                   <ul class="list-group list-group-flush">
                                   <?php 
 
                                               $args = array(
-                                                'post_type' => 'post',
+                                                'post_type' => 'Manuais',
                                                 'post_status' => 'publish',
-                                                'category_name' => 'manuais',
-                                                'posts_per_page' => 4,
+                                                'posts_per_page' => 2,
                                               );
                                               $arr_posts = new WP_Query( $args );
 
@@ -347,7 +343,7 @@
 
                                                   
 
-                                                          <li class="list-group-item"><a class="text_manual_central" href="<?php the_permalink(); ?>"><?php the_title() ?></a><p class="text-secondary"><?php the_time( 'd-m-Y' )?> - <?php the_time( 'G:i' ) ?> </p></li>
+                                                          <li class="list-group-item"><a class="text_manual_central" href="<?php the_permalink(); ?>"><?php the_title() ?></a><p class="text-secondary"><?php the_time( 'd/m/Y' )?> - <?php the_time( 'G:i' ) ?> </p></li>
 
 
                            
@@ -355,6 +351,34 @@
                                                 endwhile;
                                               endif;
                                       ?>
+
+                                              <?php 
+
+                                              $args = array(
+                                                'post_type' => 'Tutoriais',
+                                                'post_status' => 'publish',
+                                                'posts_per_page' => 2,
+                                              );
+                                              $arr_posts = new WP_Query( $args );
+
+                                              if ( $arr_posts->have_posts() ) :
+
+                                                while ( $arr_posts->have_posts() ) :
+                                                    $arr_posts->the_post();
+                                                    ?>
+
+
+
+                                                  
+
+                                                          <li class="list-group-item"><a class="text_manual_central" href="<?php the_permalink(); ?>"><?php the_title() ?></a><p class="text-secondary"><?php the_time( 'd/m/Y' )?> - <?php the_time( 'G:i' ) ?> </p></li>
+
+
+
+                                                    <?php
+                                                endwhile;
+                                              endif;
+                                              ?>
                                       
                                   </ul>
                           </div>
@@ -386,8 +410,12 @@
 
 
                     <div class="col-12">
-                        <h2 class="titulo pb-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_tit" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Perguntas Frequentes</h2>
+                        <h2 class="titulo_principal_das_categorias pb-3"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Perguntas Frequentes</h2>
                     </div>
+
+                    <div class="mb-3 text-end col-12">
+                            <button class="btn btn-dark rounded-pill btnVer"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/faq/">VER TODAS</a></button>
+                        </div>
 
                     <div class="col-12">
 
@@ -396,14 +424,13 @@
 
                                   <div class="accordion accordion-flush" id="accordionFlushExample">
 
-
+                                            
 
                                   <?php  
 
                                               $args = array(
-                                                'post_type' => 'post',
+                                                'post_type' => 'FAQ',
                                                 'post_status' => 'publish',
-                                                'category_name' => 'FAQ',
                                                 'posts_per_page' => 4,
                                               );
                                               $arr_posts = new WP_Query( $args );

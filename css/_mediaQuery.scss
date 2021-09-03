@@ -1,0 +1,255 @@
+
+
+.fast_acess
+{
+  @media screen and(max-width: 473px)
+  {
+    li:nth-child(even)
+    {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width: 767px)
+{
+  .fast_acess > li:nth-child(even)
+  {
+    margin-left: 35px !important;
+  }
+  .fast_acess > li:nth-child(odd)
+  {
+    margin-right: 10px !important;
+  }
+  .fast_acess > li:hover 
+  {
+    transform: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+{
+  .fast_acess > li:nth-child(even)
+  {
+    margin-left: 5px !important;
+  }
+  .fast_acess > li:nth-child(odd)
+  {
+    margin-right: 10px !important;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1999px)
+{
+  .fast_acess > li:nth-child(even)
+  {
+    margin-left: 15px !important;
+  }
+  .fast_acess > li:nth-child(odd)
+  {
+    margin-right: 10px !important;
+  }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1385px) {
+  .menu-lista li {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 720px)
+{
+  .menu_principal
+  {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 0px;
+    transition: .6s !important;
+    background-color: #006144;
+    z-index: 988;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active .menu_principal
+  {
+    display: flex;
+    visibility: visible;
+    height: calc(100vh - 280px);
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .menu_principal li > a
+  {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0,0,0,.05);
+  }
+
+  #btn_mobile
+  {
+    display: flex;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    padding: .5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  #hamburguer
+  {
+    width: 20px;
+    border-top: 2px solid !important;
+  }
+  #hamburguer::after, #hamburguer::before
+  {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: currentColor !important;
+    transition: .3s;
+    position: relative;
+  }
+
+  #nav.active #hamburguer
+  {
+    border-top-color: transparent !important;
+
+  }
+
+  #nav.active #hamburguer::after
+  {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburguer::before
+  {
+    transform: rotate(-135deg);
+    top: 7px;
+  }
+
+  .menu_wrapper
+  {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .nav-item:hover .sub-menu
+    {
+      min-width: 10rem !important;
+      padding: 0.25rem 0;
+      margin: 0.125rem 0 0;
+      margin-top: -2px !important;
+      left: 15%;
+    }
+
+  .nav-item .sub-menu .menu-item > a
+    {
+      color: black;
+      display: block;
+      text-align: start;
+      font-size: 14px;
+    }
+
+}
+
+@media (max-width: 992px) {
+  ul.list-unstyled li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 15px;
+  }
+
+  ul.list-unstyled li a {
+    text-decoration: none !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+  .menu-lista li {
+    padding: 10px 0px 10px 0px;
+  }
+  .menu-lista li a {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero_title {
+    color: white;
+    font-weight: 500;
+    font-size: 1.6em;
+  }
+  .title_margin {
+    padding-top: 160px;
+    padding-left: 50px;
+  }
+  .btn_saiba {
+    font-size: 16px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: 50px !important;
+    margin-top: 20px;
+  }
+
+  .btnVer:hover
+  {
+    transform: none !important;
+  }
+
+  .text_not {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 5px;
+    margin: 0 !important;
+  }
+  .text_not a {
+    color: white;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .img_section {
+    background: linear-gradient(
+        97.51deg,
+        rgba(0, 129, 90, 0.4) 0%,
+        rgba(255, 255, 255, 0.2) 52.09%,
+        rgba(55, 131, 193, 0.6) 100%
+      ),
+      url(/img/hero-pae.png) center center/cover no-repeat;
+    height: 545px !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .img_section {
+    background: linear-gradient(
+        97.51deg,
+        rgba(0, 129, 90, 0.4) 0%,
+        rgba(255, 255, 255, 0.2) 52.09%,
+        rgba(55, 131, 193, 0.6) 100%
+      ),
+      url(img/hero-pae.png) center center/cover no-repeat;
+    height: 666px !important;
+  }
+}
+
+
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .text_aument {
+    font-size: 36px;
+  }
+  .text_lower {
+    font-size: 18px;
+  }
+}

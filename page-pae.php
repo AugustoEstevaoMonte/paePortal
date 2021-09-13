@@ -125,7 +125,7 @@
                         </div>
 
                         <div class="mb-3 text-end col-12">
-                            <button class="btn btn-dark rounded-pill btnVer"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/noticias-2/">VER TODOS</a></button>
+                            <button class="btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/noticias-2/">VER TODOS</a></button>
                         </div>
 
 
@@ -195,10 +195,10 @@
                           while ( $arr_posts->have_posts() ) :
                               $arr_posts->the_post();
                               ?>
-                              <div class="inicio_dos_comunicados col-6 col-md-3  pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                              <div class="inicio_dos_comunicados col-6 col-lg-3  pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                   
 
-                                  <div class="card rounded-top">
+                                  <div class="card rounded-top h-100">
                                         <?php
                                         if ( has_post_thumbnail() ) :
                                             the_post_thumbnail();
@@ -318,8 +318,8 @@
 
                     <div class="col-12">
 
-                    <div class="text-end mb-1 col-12">
-                      <button class="btn btn-dark rounded-pill btnVer"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/manuais-e-tutoriais/">VER TODOS</a></button>
+                    <div class="text-end mb-2 col-12">
+                      <button class="btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/manuais-e-tutoriais/">VER TODOS</a></button>
                     </div>
 
                           <div>
@@ -414,7 +414,7 @@
                     </div>
 
                     <div class="mb-3 text-end col-12">
-                            <button class="btn btn-dark rounded-pill btnVer"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/faq/">VER TODAS</a></button>
+                            <button class="btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="http://localhost/augusto/paePHP/wordpress/faq/">VER TODAS</a></button>
                         </div>
 
                     <div class="col-12">

@@ -1,6 +1,6 @@
 <!--INICIO DO FOOTER DO CFM-->
 
-<footer id="changeBG" class="mt-5 bg_green">
+<footer class="changeBG mt-5 bg_green">
   <div class="container">
     <div class="row">
 
@@ -45,7 +45,7 @@
   </div>
 </footer>
 
-<footer id="changeBG" class="bg_black d-block d-sm-none">
+<footer class="changeBG bg_black d-block d-sm-none">
   <div class="container">
     <div class="row">
       <div class="col mt-2 pb-1">

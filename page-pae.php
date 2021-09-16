@@ -11,8 +11,10 @@
 
 
 <!--INICIO DO VLIBRAS-->
+<a href="javascript: return void(0);" vw-access-button="" class="vlibras" title="VLibras"></a>
 
-<div vw class="enabled d-none d-md-block">
+
+<div vw class="d-none d-md-block">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
@@ -23,6 +25,9 @@
   <div>
     <a id="contrasteBtn" href="javascript:void(0);" class="acessButton"><i class="fas fa-adjust"></i></a>
   </div>
+  <div class="mt-3">
+    <a href="javascript:void(0);" class="acessButton vLibrasActivator"><i class="fas fa-sign-language"></i></a>
+  </div>
 </div>
 <!--FIM  DO VLIBRAS-->
 
@@ -31,7 +36,7 @@
     <div class="row">
 
       <div class="ar_wrapper col-12 d-block d-lg-none">
-        <h1 id="textWhiteContraste" class="titulo_acesso_rapido"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio"></img>Acesso Rápido</h1>
+        <h1 class="textWhiteContraste titulo_acesso_rapido"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio"></img>Acesso Rápido</h1>
       </div>
 
 
@@ -82,11 +87,11 @@
 
 
           <div class="ar_wrapper col-12 d-none d-lg-block">
-            <h1 id="textWhiteContraste" class="titulo_principal_das_categorias"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio"></img>Acesso Rápido</h1>
+            <h1 class="textWhiteContraste titulo_principal_das_categorias"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio"></img>Acesso Rápido</h1>
           </div>
 
 
-          <div id="changeBG_and_border" class="inicio_dos_itens_do_acesso_rapido menu_acesso_rapido">
+          <div class="changeBG_and_border inicio_dos_itens_do_acesso_rapido menu_acesso_rapido">
             <?php
                                 $args = array(
                                   'menu' => 'principal',
@@ -127,17 +132,16 @@
 
 <!--INICIO DA PARTE DE NOTICIAS E COMUNICADOS DO CFM-->
 
-<section id="changeBG" class="bg_white mt-5">
+<section class="changeBG bg_white mt-5">
   <div class="container">
     <div class="row">
 
       <div class="col-12">
-        <h2 id="textWhiteContraste" class="titulo_principal_das_categorias pb-3 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Notícias e Comunicados</h2>
+        <h2 class="textWhiteContraste titulo_principal_das_categorias pb-3 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Notícias e Comunicados</h2>
       </div>
 
       <div class="mb-3 text-end col-12">
-        <button id="btn_contraste_change" class="btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="<?php echo site_url("noticias-2");?>">VER TODOS</a></button>
-
+        <button class="btn_contraste_change btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="<?php echo site_url("noticias-2");?>">VER TODOS</a></button>
       </div>
 
       <?php          
@@ -197,7 +201,7 @@
       <div class="inicio_dos_comunicados col-6 col-lg-3  pb-5" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-        <div id="card_contrast_change" class="card rounded-top h-100">
+        <div class="card_contrast_change card rounded-top h-100">
           <?php
               if ( has_post_thumbnail() ) :
                   the_post_thumbnail();
@@ -233,11 +237,11 @@
     <div class="row">
 
       <div class="col-12">
-        <h2 id="textWhiteContraste" class="titulo_principal_das_categorias pb-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">PAe em números</h2>
+        <h2 class="textWhiteContraste titulo_principal_das_categorias pb-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">PAe em números</h2>
       </div>
 
       <div class="col-12 pb-4 col-sm-4">
-        <div id="change_box_dados" class="box_dados d-flex">
+        <div class="change_box_dados box_dados d-flex">
           <div class="container">
             <div class="row g-0">
 
@@ -253,7 +257,7 @@
 
 
       <div class="col-12 pb-4 col-sm-4">
-        <div id="change_box_dados" class="box_dados d-flex">
+        <div class="change_box_dados box_dados d-flex">
           <div class="container">
             <div class="row g-0">
 
@@ -269,7 +273,7 @@
 
 
       <div class="col-12 col-sm-4">
-        <div id="change_box_dados" class="box_dados d-flex">
+        <div class="change_box_dados box_dados d-flex">
           <div class="container">
             <div class="row g-0">
 
@@ -300,7 +304,7 @@
 
 
 
-<section id="changeBG" class="bg_white mt-5">
+<section class="changeBG bg_white mt-5">
 
 
   <div class="container">
@@ -309,7 +313,7 @@
     <div class="row">
 
       <div class="col-12">
-        <h2 id="textWhiteContraste" class="titulo_principal_das_categorias pb-5 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Manuais e Tutoriais</h2>
+        <h2 class="textWhiteContraste titulo_principal_das_categorias pb-5 pt-5"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Manuais e Tutoriais</h2>
       </div>
 
 
@@ -317,11 +321,11 @@
       <div class="col-12">
 
         <div class="text-end mb-2 col-12">
-          <button id="btn_contraste_change" class="btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="<?php echo site_url("manuais-e-tutoriais");?>">VER TODOS</a></button>
+          <button class="btn_contraste_change btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="<?php echo site_url("manuais-e-tutoriais");?>">VER TODOS</a></button>
         </div>
 
         <div>
-          <ul id="changeBG" class="list-group list-group-flush">
+          <ul class="changeBG list-group list-group-flush">
 
             <?php 
 
@@ -338,7 +342,7 @@
                       $arr_posts->the_post();
             ?>
 
-            <li class="list-group-item"><a id="link_acess" class="text_manual_central" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+            <li class="list-group-item"><a class="link_acess text_manual_central" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
               <p class="text-secondary"><?php the_time( 'd/m/Y' )?> - <?php the_time( 'G:i' ) ?> </p>
             </li>
 
@@ -379,11 +383,11 @@
 
 
       <div class="col-12">
-        <h2 id="textWhiteContraste" class="titulo_principal_das_categorias pb-3"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Perguntas Frequentes</h2>
+        <h2 class="textWhiteContraste titulo_principal_das_categorias pb-3"><img src="<?php echo get_stylesheet_directory_uri();?>/img/icone-acesso.svg" class="icone_titulo_categorias" alt="Icone ilustrativo com 3 cores, verde claro, verde escuro, verde  médio">Perguntas Frequentes</h2>
       </div>
 
       <div class="mb-3 text-end col-12">
-        <button id="btn_contraste_change" class="btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="<?php echo site_url("faq");?>">VER TODAS</a></button>
+        <button class="btn_contraste_change btn btn-dark rounded-pill button_ver_mais"><a class="text-decoration-none" href="<?php echo site_url("faq");?>">VER TODAS</a></button>
       </div>
 
       <div class="col-12">
@@ -411,9 +415,9 @@
                                                     ?>
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-              <div id="change_box_faq" class="accordion-item mt-3 box_faq">
+              <div class="change_box_faq accordion-item mt-3 box_faq">
                 <h2 class="accordion-header" id="flush-heading<?php the_ID(); ?>">
-                  <button id="change_box_faq" class="accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="flush-collapse<?php the_ID(); ?>">
+                  <button class="change_box_faq accordion-button collapsed bg_green text_white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php the_ID(); ?>" aria-expanded="false" aria-controls="flush-collapse<?php the_ID(); ?>">
                     <p class="m-0 text_faq"><?php the_title() ?></p>
                   </button>
                 </h2>

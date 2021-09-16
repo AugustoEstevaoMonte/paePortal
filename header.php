@@ -26,7 +26,7 @@
 
 <body>
 
-  <header id="changeBG" class="bg_green logoCFM">
+  <header class="changeBG bg_green logoCFM">
 
     <!--INICIO DA PARTE DE CIMA COM A LOGO DO CFM-->
     <div class="container-fluid container-lg pt-4 pb-4">
@@ -38,7 +38,7 @@
   <!--INICIO DO MENU-->
     <header class="headerMenuPrincipal shadow">
 
-    <nav id="changeBG" class="navbar navbar-expand-lg navbar-dark menu_wrapper">
+    <nav class="changeBG navbar navbar-expand-lg navbar-dark menu_wrapper">
         <div class="container">
               
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

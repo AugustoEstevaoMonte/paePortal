@@ -52,21 +52,16 @@ add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
 
 
+/* Custom Post Type START */
 
-
-
-
-
-
-//CRIA A CATEGORIA DAS NOTICIAS
-
-/* Custom Post Type Start */
+//CUSTOM POST TYPE NOTICIAS
 function custom_post_type_noticias() {
 
 	register_post_type('noticias', array(
 		'label' => 'Noticias',
 		'description' => 'Noticias',
 		'public' => true,
+		'menu_icon' => 'dashicons-feedback',
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'capability_type' => 'post',
@@ -98,13 +93,14 @@ add_action('init', 'custom_post_type_noticias');
 
 
 
-//CRIA A CATEGORIA DE COMUNICADOS
+//CUSTOM POST TYPE COMUNICADOS
 
 function custom_post_type_comunicados() {
 	register_post_type('comunicados', array(
 		'label' => 'Comunicados',
 		'description' => 'Comunicados',
 		'public' => true,
+		'menu_icon' => 'dashicons-format-aside',
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'capability_type' => 'post',
@@ -133,7 +129,7 @@ function custom_post_type_comunicados() {
 }
 add_action('init', 'custom_post_type_comunicados');
 
-//CUSTOM POST TYPE DOS MANUAIS
+//CUSTOM POST TYPE  MANUAIS
 
 
 function custom_post_type_manuais() {
@@ -141,6 +137,7 @@ function custom_post_type_manuais() {
 		'label' => 'Manuais',
 		'description' => 'Manuais',
 		'public' => true,
+		'menu_icon' => 'dashicons-media-document',
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'capability_type' => 'post',
@@ -149,6 +146,7 @@ function custom_post_type_manuais() {
 		'rewrite' => array('slug' => 'manuais', 'with_front' => true),
 		'query_var' => true,
 		'supports' => array('title', 'editor', 'page-attributes','post-formats', 'excerpt'),
+		'hierarchical' => false,
 
 		'labels' => array (
 			'name' => 'Manuais',
@@ -176,6 +174,7 @@ function custom_post_type_FAQ() {
 		'label' => 'FAQ',
 		'description' => 'FAQ',
 		'public' => true,
+		'menu_icon' => 'dashicons-format-chat',
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'capability_type' => 'post',
@@ -204,13 +203,14 @@ function custom_post_type_FAQ() {
 }
 add_action('init', 'custom_post_type_FAQ');
 
-//inicio do banner do cfm
+//CUSTOM POST TYPE BANNER
 
 function custom_post_type_banner() {
 	register_post_type('banner', array(
 		'label' => 'Banner',
 		'description' => 'Banner',
 		'public' => true,
+		'menu_icon' => 'dashicons-megaphone',
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'capability_type' => 'post',
@@ -239,7 +239,7 @@ function custom_post_type_banner() {
 }
 add_action('init', 'custom_post_type_banner');
 
-//CUSTOM POST TYPE DOS TUTORIAIS
+//CUSTOM POST TYPE TUTORIAIS
 
 function custom_post_type_tutoriais() {
 
@@ -247,6 +247,7 @@ function custom_post_type_tutoriais() {
 		'label' => 'Tutoriais',
 		'description' => 'Tutoriais',
 		'public' => true,
+		'menu_icon' => 'dashicons-welcome-learn-more',
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'capability_type' => 'post',
@@ -255,6 +256,7 @@ function custom_post_type_tutoriais() {
 		'rewrite' => array('slug' => 'tutoriais', 'with_front' => true),
 		'query_var' => true,
 		'supports' => array('title', 'editor', 'page-attributes','post-formats', 'excerpt'),
+		'hierarchical' => false,
 
 		'labels' => array (
 			'name' => 'Tutoriais',
@@ -274,6 +276,46 @@ function custom_post_type_tutoriais() {
 	));
 }
 add_action('init', 'custom_post_type_tutoriais');
+
+// CUSTOM POST TYPE REDES SOCIAIS
+
+function custom_post_type_redes_sociais() {
+
+	register_post_type('redes sociais', array(
+		'label' => 'Redes Sociais',
+		'description' => 'Redes Sociais',
+		'public' => true,
+		'menu_icon' => 'dashicons-twitter',
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'map_meta_cap' => true,
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'redes sociais', 'with_front' => true),
+		'query_var' => true,
+		'supports' => array('title', 'editor', 'page-attributes','post-formats','thumbnail', 'excerpt'),
+		
+
+		'labels' => array (
+			'name' => 'Redes Sociais',
+			'singular_name' => 'Redes Sociais',
+			'menu_name' => 'Redes Sociais',
+			'add_new' => 'Adicionar Novas Redes Sociais',
+			'add_new_item' => 'Adicionar Novas Redes Sociais',
+			'edit' => 'Editar Redes Sociais',
+			'edit_item' => 'Editar Redes Sociais',
+			'new_item' => 'Novos Redes Sociais',
+			'view' => 'Ver Redes Sociais',
+			'view_item' => 'Ver Redes Sociais',
+			'search_items' => 'Procurar Redes Sociais',
+			'not_found' => 'Não foram encontradas redes sociais',
+			'not_found_in_trash' => 'Não foram encontradas redes sociais no lixo',
+		)
+	));
+}
+add_action('init', 'custom_post_type_redes_sociais');
+
+/* Custom Post Type END */
 
 
 
@@ -471,3 +513,5 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 }
 
 ?>
+
+

@@ -4,11 +4,28 @@
  */
 get_header();
 ?>
-<section class="bg_white p-5 shadow">
+
+<!--INICIO DO VLIBRAS-->
+
+<div vw class="enabled d-none d-md-block">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<div class="sideBar d-none d-md-block" style="position: fixed; right: 0; top: 34%;">
+  <div>
+    <a id="contrasteBtn" href="javascript:void(0);" class="acessButton"><i class="fas fa-adjust"></i></a>
+  </div>
+</div>
+<!--FIM  DO VLIBRAS-->
+
+<section id="changeBG" class="bg_white p-5 shadow">
         <div class="container">
                     <div class="row">
                             <div class="col-12">
-                                <h1 class="titulo_category_pages text-start">Noticias e Comunicados</h1>
+                                <h1 id="titulo_category_con" class="titulo_category_pages text-start">Noticias e Comunicados</h1>
                             </div>
                     </div>
         </div>
@@ -36,7 +53,7 @@ get_header();
 
         <div class="row">
             <div class="col-12">
-                <div class="card_category_proprieties shadow">
+                <div id="change_card_category" class="card_category_proprieties shadow">
 
                 <p class="text-start text_category_date"><?php the_time('d/m/Y')?></p>
 
@@ -53,7 +70,7 @@ get_header();
                                <a href="<?php the_permalink()?>"><img class="w-100 h-100 image_category_thumb" src="<?php echo $image_thumb[0]; ?>" title="<?php the_title(); ?>"></a>
                               </div>
 
-                              <div class="col">
+                              <div id="noticias_con" class="col">
                                   <h1 class="mb-2"><a class="titulo_categorias_card" href="<?php the_permalink()?>"><?php the_title() ?></a></h1>
                                     <p class=""><a class="text-decoration-none text_category_paragraph" href="<?php the_permalink()?>"><?php $content = get_the_content(); echo mb_strimwidth($content, 0, 400, ' [...]');?></a></p>
                                     <!--echo mb_strimwidth($content, 0, 400, '...'); FAZ O EFEITO DO CONTENT APARECER SOMENTE ALGUMAS PALAVRAS EM VEZ DO CONTENT INTEIRO-->

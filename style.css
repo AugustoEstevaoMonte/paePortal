@@ -34,12 +34,9 @@ Version: 1.0
 /*FIM DO MODIFICADOR DE CSS DO WORDPRESS*/
 
 /*CSS DO FOOTER*/
-.display_sm_redes_sociais {
-  display: none;
-}
 
 .social_imgs {
-  align-items: center !important;
+  align-items: center;
   display: flex;
 }
 
@@ -85,10 +82,6 @@ ul.list-unstyled li a {
   margin-top: 25px;
   font-size: 26px;
   margin-bottom: 25px;
-}
-
-.display_none_sm {
-  display: none;
 }
 /*FIM DO TITULO QUE SE MOSTRA NO TAMANHO SM*/
 
@@ -163,6 +156,173 @@ ul.list-unstyled li a {
 /*FIM DO TORNA LINK DAS IMAGENS CLICAVEIS*/
 
 /*FIM DO HERO BANNER DO CFM E DO NIVO*/
+
+
+/*CSS DO VLIBRAS*/
+.changes > div > div > a
+{
+  background: #000000 !important;
+  border: 0.5px solid yellow !important;
+}
+
+.box_contraste_change
+{
+  background: black !important;
+  border: 2px solid yellow !important;
+}
+
+.sideBar
+{
+  right: 0;
+  left: auto;
+  z-index: 99;
+}
+.acessButton
+{
+    min-height: 52px;
+    font-size: 2em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 2px 0;
+    background: #424544;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 20%);
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.acessButton > .svg-inline--fa{
+  width: 24px !important;
+  height: 24px !important;
+  color: white;
+}
+
+.box_con_faq_change
+{
+  background: transparent !important;
+}
+
+.box_con_faq_change > h2 > button
+{
+  border: 1px solid yellow !important;
+  border-bottom-right-radius: calc(0.25rem - 1px) !important;
+  border-bottom-left-radius: calc(0.25rem - 1px) !important;
+}
+
+.card_con_change
+{
+  background-color: transparent !important;
+  border: 1px solid yellow !important;
+}
+
+.card_con_change > div > h5 > a
+{
+  color: white !important;
+}
+.card_con_change > div > h5 > a:hover
+{
+  color: white !important;
+}
+
+.nivo_con_change 
+{
+  background-color: black !important;
+}
+
+.titulo_category_contrast
+{
+  color: white !important;
+}
+.card_category_con
+{
+  background-color: black !important;
+  border: 2px solid yellow !important;
+}
+
+.card_category_con > p
+{
+  color: white !important;
+}
+
+.card_category_con > h1 > a
+{
+  color: white !important;
+}
+.card_category_con > p
+{
+  color: white !important;
+}
+
+.card_category_con > p > a
+{
+  color: yellow !important;
+}
+
+.noticias_contrast_change > h1 > a
+{
+  color: white !important;
+}
+
+.noticias_contrast_change > p > a{
+  color: yellow !important;
+}
+
+.single_contrast_change > p
+{
+  color: white !important;
+}
+
+.single_contrast_change > p > a
+{
+  color: yellow !important;
+}
+
+.contraste_bg
+{
+  background-color: #000000 !important;
+}
+.contraste_bg > li
+{
+  background-color: #000000 !important;
+}
+
+.text_contrast
+{
+  color: #FFFFFF !important;
+}
+
+.link_contrast
+{
+  color: white !important;
+}
+
+.link_contrast:hover
+{
+  color: white !important;
+}
+
+.sidemenu_contrast
+{
+  background-image: url(/img/icon-contrast.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.btn_con_change
+{
+  border: 1px solid yellow !important;
+  color: white !important;
+}
+
+.btn_con_change > a
+{
+  color: white !important;
+}
+
+/*FIM DO CSS do vlibras*/
+
 
 /*INICIO DO CSS DO ACESSO RÁPIDO*/
 
@@ -357,14 +517,14 @@ h2.titulo_icon a {
 }
 
 .text_manual_central:hover {
-  color: black !important;
+  color: black;
 }
 
 /*FIM DA ESTILIZAÇÃO DOS MANUAIS DO CFM*/
 
 /*INICIO DA ESTILIZAÇÃO DO FAQ*/
 .box_faq {
-  background: #00815a !important;
+  background: #00815a;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px !important;
@@ -422,7 +582,7 @@ body {
   transition: 0.2s all ease;
 }
 .button_ver_mais > a {
-  color: #32a683 !important;
+  color: #32a683;
 }
 
 
@@ -543,6 +703,15 @@ body {
 
 @media (max-width: 575.98px)
 {
+  .social_imgs
+  {
+    justify-content: space-between !important;
+  }
+  .social_imgs > a > img
+  {
+    margin-left: 0px;
+  }
+
   .box_color_and_properties a
   {
     width: 100%;
@@ -617,10 +786,6 @@ body {
   }
 
   /*FIM DO CSS DO NIVO SLIDER*/
-
-  .display_show_on_sm {
-    display: block;
-  }
   .texto_noticias {
     font-size: 16px;
   }
@@ -634,10 +799,6 @@ body {
   }
   .text_manual_central {
     font-size: 18px;
-  }
-
-  .display_sm_redes_sociais {
-    display: block;
   }
 
   .hero_title {
@@ -774,13 +935,6 @@ body {
 
   /*FIM DO CSS DO NIVO SLIDER*/
 
-  .social_imgs > a > img {
-    margin-left: 18px;
-  }
-
-  .display_show_on_sm {
-    display: block;
-  }
   /*CSS DOS COMUNICADOS*/
   /*CSS DOS COMUNICADOS*/
 
@@ -819,6 +973,11 @@ body {
 /*MD*/
 @media (min-width: 768px) 
 {
+  .titulo_acesso_rapido
+  {
+    margin-top: 0px;
+  }
+
   .padding_left_and_right
   {
     padding-right: 15px;
@@ -894,17 +1053,6 @@ body {
 
   /*FIM DO CSS DO NIVO SLIDER*/
 
-  /*DISPLAY DO TITULO ACESSO RÁPIDO MENOR*/
-  .display_show_on_sm {
-    display: none;
-  }
-  /*fim do DISPLAY DO TITULO ACESSO RÁPIDO MENOR*/
-
-  /*DISPLAY DO TITULO ACESSO RÁPIDO MAIOR*/
-  .display_none_sm {
-    display: block;
-  }
-  /*FIM DISPLAY DO TITULO ACESSO RÁPIDO MAIOR*/
 
   /*CSS DE COMUNICADOS*/
   .texto_card_comunicados {

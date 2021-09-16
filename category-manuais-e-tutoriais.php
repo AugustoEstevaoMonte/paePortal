@@ -4,26 +4,43 @@
  */
 get_header();
 ?>
-<section class="bg_white p-5 shadow">
+<!--INICIO DO VLIBRAS-->
+
+<div vw class="enabled d-none d-md-block">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<div class="sideBar d-none d-md-block" style="position: fixed; right: 0; top: 34%;">
+  <div>
+    <a id="contrasteBtn" href="javascript:void(0);" class="acessButton"><i class="fas fa-adjust"></i></a>
+  </div>
+</div>
+<!--FIM  DO VLIBRAS-->
+
+
+<section id="changeBG" class="bg_white p-5 shadow">
         <div class="container">
                     <div class="row">
                             <div class="col-12">
-                                <h1 class="titulo_category_pages text-start">Manuais e Tutoriais</h1>
+                                <h1 id="titulo_category_con" class="titulo_category_pages text-start">Manuais e Tutoriais</h1>
                             </div>
                     </div>
         </div>
 </section>
 
 <div class="content" style="min-height: 440px;">
-<?php
-          $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-          $query = new WP_Query( array(
-              'post_type' => array('Manuais', 'Tutoriais'),
-              'orderby' => 'meta_value',
-              'posts_per_page' => 8,
-              'paged' => $paged
-          ) );
-      ?>
+        <?php
+            $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+            $query = new WP_Query( array(
+                'post_type' => array('Manuais', 'Tutoriais'),
+                'orderby' => 'meta_value',
+                'posts_per_page' => 8,
+                'paged' => $paged
+            ) );
+        ?>
 
       <?php if ( $query->have_posts() ) : ?>
 
@@ -36,7 +53,7 @@ get_header();
 
         <div class="row">
             <div class="col-12">
-                <div class="card_category_proprieties shadow">
+                <div id="change_card_category" class="card_category_proprieties shadow">
 
                  <p class="text-start text_category_date m-0"><?php the_time('d/m/Y')?></p>
 
@@ -62,8 +79,5 @@ get_header();
       <?php endif; ?>
 
 </div>
-
-
-
 
 <?php get_footer();?>

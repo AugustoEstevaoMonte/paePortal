@@ -11,9 +11,9 @@
   <meta name="robots" content="index, follow">
   <meta name="rating" content="general">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/lib/nivo-slider/themes/default/default.css">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/lib/nivo-slider/nivo-slider.css">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.css">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri();?>/lib/nivo-slider/nivo-slider.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
   <?php
   if (isset($args['titulo']) && !empty($args['titulo'])) {
     $titulo = $args['titulo'];
@@ -26,11 +26,11 @@
 
 <body>
 
-  <header class="bg_green logoCFM">
+  <header id="changeBG" class="bg_green logoCFM">
 
     <!--INICIO DA PARTE DE CIMA COM A LOGO DO CFM-->
     <div class="container-fluid container-lg pt-4 pb-4">
-        <a href="/augusto/paePHP/wordpress/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logoCFMmaior.png" alt="Logo do Conselho Federal de Medicina" class="img-fluid logoPrincipalCFM"></a>
+        <a href="<?php echo get_home_url();?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logoCFMmaior.png" alt="Logo do Conselho Federal de Medicina" class="img-fluid logoPrincipalCFM"></a>
     </div>
     <!--FIM DA PARTE DE CIMA COM A LOGO DO CFM-->
   </header>
@@ -38,7 +38,7 @@
   <!--INICIO DO MENU-->
     <header class="headerMenuPrincipal shadow">
 
-    <nav class="navbar navbar-expand-lg navbar-dark menu_wrapper">
+    <nav id="changeBG" class="navbar navbar-expand-lg navbar-dark menu_wrapper">
         <div class="container">
               
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
